@@ -19,14 +19,15 @@ export default function Hero() {
   const leftRef = useRef([])
   const rightRef = useRef([])
 const leftImages = [
-  { src: left1, w: "28vw", h: "29vh", x: -125, y: -370 },
-  { src: left2, w: "22vw", h: "25vh", x: -39, y: -125  },
+  { src: left1, w: "28vw", h: "29vh", x: "-7.5vw", y: "-45vh" },
+  { src: left2, w: "22vw", h: "25vh", x: "-1.5vw", y: "-15vh" },
 ]
 
 const rightImages = [
-  { src: right1, w: "22vw", h: "25vh", x: 150, y: -110 },
-  { src: right2, w: "28vw", h: "29vh", x: 150, y: 100 },
+  { src: right1, w: "22vw", h: "25vh", x: "9.5vw", y: "-9vh" },
+  { src: right2, w: "28vw", h: "29vh", x: "9.5vw", y: "17vh" },
 ]
+
 
 
 
@@ -41,15 +42,15 @@ const rightImages = [
 
     leftRef.current.forEach(el => {
   gsap.set(el, {
-    x: Math.round(Number(el.dataset.x)),
-    y: Math.round(Number(el.dataset.y)),
+    x: el.dataset.x,
+    y: el.dataset.y,
   })
 })
 
 rightRef.current.forEach(el => {
   gsap.set(el, {
-    x: Math.round(Number(el.dataset.x)),
-    y: Math.round(Number(el.dataset.y)),
+    x: el.dataset.x,
+    y: el.dataset.y,
   })
 })
 
@@ -66,10 +67,10 @@ rightRef.current.forEach(el => {
 
       // HERO SHRINK
 tl.to(heroRef.current, {
-  width: "30%",
-  height: "75vh",
+  width: "28%",
+  height: "71vh",
   ease: "power3.inOut",
-  top:"5%"
+  top:"8%"
 },
 0
 )
@@ -81,7 +82,7 @@ tl.to(heroRef.current, {
 tl.from(
   leftRef.current,
   {
-    x: "-=510",
+    x: "-=40vw",
     y: "+=100",
     force3D: true,
     stagger: 0.15,
@@ -93,7 +94,7 @@ tl.from(
 tl.from(
   rightRef.current,
   {
-    x: "+=510",
+    x: "+=40vw",
     y: "+=100",
     force3D: true,
     stagger: 0.15,
