@@ -114,9 +114,14 @@ tl.from(
   return (
 <section ref={sectionRef} className="scroll-section flex  justify-center">
 
-  {/* FULLSCREEN HERO (INITIAL) */}
-  <div ref={heroRef} className="hero-full p-2 ">
-    <img className="rounded-xl" src={hero} />
+  {/* FULLSCREEN HERO (INITIAL) , comfort, and practical living */}
+  <div ref={heroRef} className="hero-full p-2 relative">
+    <div className="absolute w-full h-full z-10 text-white  font-semibold flex flex-col justify-end items-center ">
+        <h1 className="text-[4.8vw]">Designing interiors and furniture that balance </h1>
+        <h1 className="text-[20vw] -mt-[8vw]" > aesthetics  </h1>
+        </div>
+    <img className="rounded-xl relative " src={hero} />
+
   </div>
 
   {/* GRID CONTENT (REVEALED LATER) */}
