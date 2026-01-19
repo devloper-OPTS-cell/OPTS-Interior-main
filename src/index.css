@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+
+
+.hero-full {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 10;
+  overflow: hidden;
+}
+
+
+.hero-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+.scroll-section {
+  min-height: 200vh;
+  background: white;
+}
+
+.grid-layout {
+  display: grid;
+grid-template-columns: minmax(280px, 1fr) auto minmax(280px, 1fr);
+
+  align-items: center;
+  gap: 4rem;
+  height: 100vh;
+  padding: 0 6rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.side-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.side-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.side-column {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.hero-full,
+.side-item {
+  will-change: transform;
+  transform: translateZ(0);
+}
