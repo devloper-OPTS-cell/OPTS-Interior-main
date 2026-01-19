@@ -6,8 +6,9 @@ import left1 from '../assets/left1.jpg'
 import right2 from '../assets/right2.jpg'
 import left2 from '../assets/left2.jpg'
 import hero from '../assets/hero.jpg'
-import { Flip } from "gsap/flip"
-gsap.registerPlugin(ScrollTrigger, Flip)
+
+
+gsap.registerPlugin(ScrollTrigger)
 ScrollTrigger.normalizeScroll(true)
 
 
