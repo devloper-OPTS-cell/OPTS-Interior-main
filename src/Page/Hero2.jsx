@@ -129,7 +129,7 @@ export default function Hero2() {
           height: 100%;
           position: relative;
           overflow: hidden;
-          background-color: #fff;
+
           display: flex;
           align-items: center;
           justify-content: center;
