@@ -5,6 +5,7 @@ import Hero3 from './Page/Hero3'
 import Hero2 from './Page/Hero2'
 import Clients from './Page/Clients'
 import Services from './Page/Services'
+import Works from './Page/Works'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
 <Hero3/>
 <Hero2/>
 <Clients/>
+<Works/>
 <Services/>
     </div>
   )
