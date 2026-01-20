@@ -2,6 +2,20 @@
 
 
 
+/* src/index.css */
+
+@font-face {
+  font-family: 'RightGrotesk';
+  /* Notice the folder name matches your rename */
+  src: url('./assets/fonts/right-grotesk/RightGrotesk-CompactBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.font-grotesk {
+  font-family: 'RightGrotesk', sans-serif;
+}
+
 .hero-full {
   position: fixed;
 
