@@ -9,7 +9,7 @@ import hero from '../assets/hero.jpg'
 
 
 
-const Services = () => {
+const ChooseUs = () => {
   return (
     <div className="min-h-screen bg-[#fbfbf9] text-[#333333] font-sans selection:bg-[#dea03c] selection:text-white">
       
@@ -115,10 +115,26 @@ When choosing OPTS, you align with a creative team that brings 10+ years of expe
             </div>
           </div>
 
+                    {/* Item 03 */}
+          <div className="group border-b border-gray-200 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div className="md:col-span-2 text-8xl  font-medium text-[#bfbfbf]">04</div>
+            <div className="md:col-span-4 text-3xl font-normal text-[#4a4a4a]">Lorem ipsum</div>
+            <div className="md:col-span-6 pl-4">
+              <div className="mb-6">
+                <Handshake size={48} className="text-gray-500 stroke-[1]" />
+              </div>
+              <p className="text-gray-600 leading-relaxed max-w-md">
+                Our efforts don't end when we hand you the keys to your new
+                home. We provide on-going personalized warranty support as well
+                as copies of manuals, warranty and maintenance information.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+export default ChooseUs;
