@@ -67,7 +67,7 @@ const Footer = () => {
       <a href={`tel:${phoneNumber}`}>
       <button className='flex items-center gap-2 cursor-pointer'>
         <Phone size={17} />
-        <h1>+91 98765 43210</h1>
+        <h1>+9715434306616</h1>
       </button>
     </a>
     <a  
