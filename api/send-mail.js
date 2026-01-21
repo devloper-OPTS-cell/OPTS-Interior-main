@@ -29,7 +29,7 @@ if (!name || !email || !phone) {
 
     await transporter.sendMail({
       from: `"OPTS interior " <${process.env.EMAIL_USER}> `,
-      to: "prashant81046@gmail.com",
+      to: "hello@optsinterior.com",
       replyTo: email,
       subject: "Form Submitted from website ",
       html: `
