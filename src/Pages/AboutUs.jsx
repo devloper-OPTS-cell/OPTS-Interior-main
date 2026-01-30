@@ -42,7 +42,7 @@ const AboutUs = () => {
   return (
     <div className="font-sans">
       
-      <div className="p-8 sm:p-16 max-w-[1440px] mx-auto">
+      <div className="p-8 sm:p-16 max-w-[1440px] mx-auto md:mt-10 mt-20">
         
         {/* --- SECTION 1: INTRO --- */}
         <div className="mb-24">

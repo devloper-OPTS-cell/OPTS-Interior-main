@@ -1,184 +1,107 @@
-import React from 'react';
+import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
-
-    const recipientEmail = "hello@optsinterior.com"
-    const phoneNumber = "+971543430661"
-    const mapLink = "https://maps.app.goo.gl/YourCopiedLinkHere"
+  const recipientEmail = "hello@optsinterior.com";
+  const phoneNumber = "+971543430661";
+  const mapLink = "https://maps.app.goo.gl/YourCopiedLinkHere";
 
   return (
-    <footer className=" bg-[#032859] text-white py-5 font-sans fixed bottom-0 -z-10  w-screen">
-      {/* Top Section: Logo */}
-      <div className="flex justify-center mb-8">
-        {/* Replace the text below with your actual logo image for 100% accuracy */}
-        {/* <img src="/path-to-schbang-logo.svg" alt="Schbang" className="h-12" /> */}
-        <h1 className="text-5xl font-bold tracking-tight"></h1>
-      </div>
+    <footer className="bg-[#032859] text-white font-sans">
+      <div className="max-w-7xl mx-auto px-6 py-12">
 
-      {/* Divider Line */}
-      <div className="w-full h-px bg-white/20 mb-8 max-w-[95%] mx-auto"></div>
+        {/* Divider */}
+        <div className="h-px bg-white/20 mb-10" />
 
-      {/* Bottom Section: Content */}
-      <div className="max-w-[95%] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
-        
-        {/* Left: Social Icons */}
-        <div className="flex items-center gap-6">
-          <SocialIcon href="#" label="LinkedIn">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-          </SocialIcon>
+        {/* Content */}
+        <div className="grid gap-10 md:grid-cols-3">
 
-          <SocialIcon href="#" label="Instagram">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-          </SocialIcon>
+          {/* Social Icons */}
+{/* Social Icons */}
+<div className="flex justify-center md:justify-start gap-6">
+  <a href="#" className="hover:text-blue-400 transition-colors">
+    <FaLinkedin size={28} className="sm:size-6 md:size-7 lg:size-8" />
+  </a>
+  <a href="#" className="hover:text-pink-500 transition-colors">
+    <RiInstagramFill size={28} className="sm:size-6 md:size-7 lg:size-8" />
+  </a>
+  <a href="#" className="hover:text-red-600 transition-colors">
+    <FaYoutube size={28} className="sm:size-6 md:size-7 lg:size-8" />
+  </a>
+  <a href="#" className="hover:text-blue-600 transition-colors">
+    <FaFacebookSquare size={28} className="sm:size-6 md:size-7 lg:size-8" />
+  </a>
+</div>
 
-          <SocialIcon href="#" label="YouTube">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none" />
-          </SocialIcon>
+          {/* Navigation */}
+          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-light">
+            <FooterLink to="/about-us">About Us</FooterLink>
+            <FooterLink to="/services">Services</FooterLink>
+            <FooterLink to="/projects">Projects</FooterLink>
+            <FooterLink to="/contact-us">Contact</FooterLink>
+          </nav>
 
-          <SocialIcon href="#" label="Facebook">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-          </SocialIcon>
-        </div>
+          {/* Contact */}
+          <div className="text-sm space-y-4 text-center md:text-left">
+            <p className="text-lg font-medium">Reach Out</p>
 
-        {/* Center: Navigation Links */}
-        <nav className="flex items-center gap-6 text-sm md:text-base font-light">
-          <FooterLink href="#">About Us</FooterLink>
-          <FooterLink href="#">Contact</FooterLink>
-          <FooterLink href="#">Services</FooterLink>
-          <FooterLink href="#">Work</FooterLink>
-        </nav>
+            <a href={`mailto:${recipientEmail}`} className="flex items-center justify-center md:justify-start gap-2 hover:opacity-80">
+              <Mail size={16} />
+              {recipientEmail}
+            </a>
 
-        {/* Right: Copyright Text */}
-        <div className="text-center flex flex-col items-start text-xs md:text-sm font-light leading-relaxed opacity-90 gap-2">
-          <p className='text-sm md:text-lg '>Reach Out</p>
-          <div className='flex flex-col gap-3'>
-        <a  href={`mailto:${recipientEmail}`}>
-        <button className='flex items-center gap-2 cursor-pointer' >
-          <Mail size={17} />
-          <h1>hello@optsinterior.com</h1>
-        </button>
-      </a>
-      <a href={`tel:${phoneNumber}`}>
-      <button className='flex items-center gap-2 cursor-pointer'>
-        <Phone size={17} />
-        <h1>+9715434306616</h1>
-      </button>
-    </a>
-    <a  
-      href={mapLink} 
-      target="_blank" 
-      rel="noopener noreferrer" // Security best practice for _blank
-    >
-      <button className='flex items-start justify-center gap-2 text-left cursor-pointer'>
-        <MapPin className='mt-1' size={20} />
-          
-        {/* Using a div to stack text if you want it exactly like the image */}
-        <div className="flex flex-col">
-<h1>OPTS, Plot No. 365-150,   </h1>
-<h1>Warehouse No. 8 Opposite MTM,</h1>
-<h1>Al Quoz Industrial Area 2,</h1>
-<h1>Dubai</h1>
-        </div>
-      </button>
-    </a>
+            <a href={`tel:${phoneNumber}`} className="flex items-center justify-center md:justify-start gap-2 hover:opacity-80">
+              <Phone size={16} />
+              +971 543 430 661
+            </a>
+
+            <a
+              href={mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start justify-center md:justify-start gap-2 hover:opacity-80"
+            >
+              <MapPin size={18} className="mt-1" />
+              <span>
+                OPTS, Plot No. 365-150<br />
+                Warehouse No. 8, Al Quoz<br />
+                Dubai
+              </span>
+            </a>
           </div>
         </div>
+
+        {/* Bottom */}
+        <p className="text-center text-xs opacity-70 mt-12">
+          © {new Date().getFullYear()} OPTS Interior. All rights reserved.
+        </p>
       </div>
     </footer>
   );
 };
 
-// Helper Components for cleaner code
-const SocialIcon = ({ children, href, label }) => (
-  <a 
-    href={href} 
+/* Components */
+const SocialIcon = ({ children, label }) => (
+  <a
+    href="#"
     aria-label={label}
-    className="bg-white text-black p-1.5 rounded-sm hover:opacity-80 transition-opacity"
+    className="w-8 h-8 bg-white text-black rounded flex items-center justify-center hover:bg-gray-200 transition"
   >
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="20" 
-      height="20" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-      className="w-5 h-5 block" // block ensures no extra spacing
-    >
-      {/* For YouTube specifically, we need fill handling differently usually, but stroke works for outline style. 
-          If you want solid icons, remove stroke and add fill="black".
-          Based on image, icons are black symbols on white boxes (or inverted).
-          The image shows White icons on Black background? Actually, looking closer:
-          The icons are White shapes.
-      */}
-      {/* CORRECTION based on Image: Icons are White shapes on Black background. */}
-      {/* Let's fix styling inside the component below */}
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
       {children}
     </svg>
   </a>
 );
 
-// RE-WRITING SocialIcon to match image EXACTLY (White icon, transparent bg)
-const ExactSocialIcon = ({ children, href, label }) => (
-  <a 
-    href={href} 
-    aria-label={label}
-    className="bg-white rounded-md p-1 flex items-center justify-center hover:opacity-80 transition-opacity"
-    style={{ width: '32px', height: '32px' }}
-  >
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      fill="black" 
-      stroke="none"
-      className="w-5 h-5"
-    >
-      {children}
-    </svg>
-  </a>
-);
-
-// UPDATED: The image shows white icons inside white rounded squares? 
-// No, looking at the crop: They are White logos inside white squares? No. 
-// They are Black logos inside White squares.
-// The code below implements: White Square Container -> Black Icon Path.
-
-const FooterLink = ({ href, children }) => (
-  <a href={href} className="hover:underline hover:text-gray-300 transition-colors">
+const FooterLink = ({ to, children }) => (
+  <Link to={to} className="hover:underline hover:opacity-80 transition">
     {children}
-  </a>
+  </Link>
 );
 
 export default Footer;
-
-// NOTE: To fix the icon component to match the image exactly:
-// The image has white squares with the logo cut out (or black logo inside).
-// Use this specific SocialIcon component definition:
-
-const FinalSocialIcon = ({ children, href, label }) => (
-    <a 
-      href={href} 
-      aria-label={label}
-      className="bg-white text-black w-8 h-8 flex items-center justify-center rounded-[4px] hover:bg-gray-200 transition-colors"
-    >
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="currentColor" 
-        stroke="currentColor" 
-        strokeWidth="0" 
-      >
-        {children}
-      </svg>
-    </a>
-);

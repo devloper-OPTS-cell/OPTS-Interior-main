@@ -61,7 +61,7 @@ function ContactUs() {
 
   return (
     // 1. Main Background changed to white
-    <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-8 font-sans">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-8 font-sans md:mt-10 mt-20">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         
         {/* LEFT SIDE: Text is now Dark Blue (#032859) to be visible on white bg */}
