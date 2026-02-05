@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, Users, Handshake } from 'lucide-react';
+import { ArrowRight, Award, Users, Handshake, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Placeholder imports for demo purposes - ensure these match your actual paths
@@ -27,10 +27,10 @@ const ChooseUs = () => {
 
           <div className="space-y-6 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
             <p>
-              When choosing OPTS, you align with a creative team that brings 10+ years of expertise in fine furniture and residential interiors. We are specialists in custom upholstery, wood craftsmanship, spatial design, and project management. We begin by understanding your lifestyle needs, then guide you through every detail of the selection and fabrication process, until you settle into your beautifully transformed space.
+Choosing OPTS means partnering with a team that understands design, functionality, and execution. We focus on creating interiors that are not only visually appealing but also practical, durable, and tailored to your needs.
             </p>
             <p>
-              Experience for yourself why so many of our customers build with us again!
+With hands-on industry experience, skilled craftsmanship, and a detail-oriented approach, we manage every stage of the project — from design planning to final installation — ensuring a smooth and reliable experience.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const ChooseUs = () => {
             {/* Number: Smaller on mobile (6xl) */}
             <div className="md:col-span-2 text-6xl md:text-8xl font-medium text-[#bfbfbf]">01</div>
             {/* Title */}
-            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Superior Quality</div>
+            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Quality Craftsmanship</div>
             {/* Content: Removed pl-4 on mobile, kept on desktop */}
             <div className="md:col-span-6 pl-0 md:pl-4">
               <div className="mb-4 md:mb-6 hidden md:block">
@@ -86,9 +86,7 @@ const ChooseUs = () => {
                 <Award size={32} className="text-gray-500 stroke-[1]" />
               </div>
               <p className="text-gray-600 leading-relaxed max-w-md">
-                We take great pride in the quality of our construction. We design
-                and build top-tier, superior quality homes that you will enjoy for
-                years to come.
+At OPTS Express Interior, quality is built through skilled craftsmanship, careful material selection, and precise execution — resulting in interiors that feel refined and long-lasting.
               </p>
             </div>
           </div>
@@ -96,7 +94,7 @@ const ChooseUs = () => {
           {/* Item 02 */}
           <div className="group border-b border-gray-200 py-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
             <div className="md:col-span-2 text-6xl md:text-8xl font-medium text-[#bfbfbf]">02</div>
-            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Collaborative</div>
+            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Client-Focused Collaboration</div>
             <div className="md:col-span-6 pl-0 md:pl-4">
               <div className="mb-4 md:mb-6 hidden md:block">
                 <Users size={48} className="text-gray-500 stroke-[1]" />
@@ -105,9 +103,7 @@ const ChooseUs = () => {
                 <Users size={32} className="text-gray-500 stroke-[1]" />
               </div>
               <p className="text-gray-600 leading-relaxed max-w-md">
-                Our team of experts are with you each step of the way: From initial
-                vision to land acquisition, architectural and interior design, all the
-                way through construction, warranty, and on-going support.
+We believe great interiors are built through collaboration. Our team listens carefully to your requirements, offers clear guidance, and works closely with you to ensure the final result aligns perfectly with your vision.
               </p>
             </div>
           </div>
@@ -115,7 +111,7 @@ const ChooseUs = () => {
           {/* Item 03 */}
           <div className="group border-b border-gray-200 py-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
             <div className="md:col-span-2 text-6xl md:text-8xl font-medium text-[#bfbfbf]">03</div>
-            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Comprehensive Support</div>
+            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Complete Interior Solutions</div>
             <div className="md:col-span-6 pl-0 md:pl-4">
               <div className="mb-4 md:mb-6 hidden md:block">
                 <Handshake size={48} className="text-gray-500 stroke-[1]" />
@@ -124,9 +120,7 @@ const ChooseUs = () => {
                 <Handshake size={32} className="text-gray-500 stroke-[1]" />
               </div>
               <p className="text-gray-600 leading-relaxed max-w-md">
-                Our efforts don't end when we hand you the keys to your new
-                home. We provide on-going personalized warranty support as well
-                as copies of manuals, warranty and maintenance information.
+From design concepts and space planning to custom furniture, fit-out, and installation, we handle the entire interior process under one roof — ensuring consistency, efficiency, and timely delivery.
               </p>
             </div>
           </div>
@@ -134,18 +128,16 @@ const ChooseUs = () => {
           {/* Item 04 */}
           <div className="group border-b border-gray-200 py-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
             <div className="md:col-span-2 text-6xl md:text-8xl font-medium text-[#bfbfbf]">04</div>
-            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Lorem ipsum</div>
+            <div className="md:col-span-4 text-2xl md:text-3xl font-normal text-[#4a4a4a]">Reliable Execution & Support</div>
             <div className="md:col-span-6 pl-0 md:pl-4">
               <div className="mb-4 md:mb-6 hidden md:block">
-                <Handshake size={48} className="text-gray-500 stroke-[1]" />
+                <ShieldCheck size={48} className="text-gray-500 stroke-[1]" />
               </div>
               <div className="mb-4 md:hidden">
-                <Handshake size={32} className="text-gray-500 stroke-[1]" />
+                <ShieldCheck size={32} className="text-gray-500 stroke-[1]" />
               </div>
               <p className="text-gray-600 leading-relaxed max-w-md">
-                Our efforts don't end when we hand you the keys to your new
-                home. We provide on-going personalized warranty support as well
-                as copies of manuals, warranty and maintenance information.
+We are committed to smooth project execution and dependable support. Our team ensures proper coordination, on-site management, and follow-through to deliver interiors you can trust, even after project completion.
               </p>
             </div>
           </div>

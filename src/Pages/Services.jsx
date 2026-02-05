@@ -1,6 +1,11 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react'; 
 import left1 from '../assets/left1.jpg'; 
+import img1 from '../assets/services/IMG_5070.webp'
+import img2 from '../assets/services/IMG_5083.jpg'
+import img3 from '../assets/services/IMG_5084.webp'
+import img4 from '../assets/services/IMG_5069.webp'
+import img5 from '../assets/services/IMG_5071.webp'
 
 const Office = () => {
   return (
@@ -23,20 +28,16 @@ const Office = () => {
                   alt="Project Preview" 
                   className="w-full h-auto object-cover opacity-80"
                 />
-                <div className="absolute bottom-2 left-2 text-[8px] text-white leading-tight font-mono">
-                  <p>Still living like</p>
-                  <p>A college student</p>
-                </div>
               </div>
             </div>
 
             {/* Hero Typography */}
             <h1 className="text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] tracking-tighter font-medium">
-              <span className="ml-0 md:ml-32 lg:ml-58">shaping the best</span> 
+              <span className="ml-0 md:ml-32 lg:ml-58">Shaping functional </span> 
               <br className="hidden md:block" />
-              <span> brands and Homes of</span> 
+              <span> interiors for homes, offices, </span> 
               <br className="hidden md:block" />
-              <span className="text-[#d1d1d1]"> tomorrow’s greatest players.</span>
+              <span className="text-[#d1d1d1]"> and commercial spaces.</span>
             </h1>
 
           </div>
@@ -46,8 +47,7 @@ const Office = () => {
         <footer className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-16 md:mt-0">
           <div className="max-w-md text-sm md:text-base lg:text-lg leading-relaxed tracking-tight font-medium">
             <p>
-              Bold Creatives is here for the ones who don’t just follow trends, they set them. 
-              Our services go beyond design, we’re talking premium, high-impact branding and web experiences that make your brand unforgettable.
+Our services cover every stage of the interior process, including concept development, space planning, custom furniture, fit-out execution, and final installation. Each service is delivered with a clear process, technical precision, and attention to detail to ensure smooth project completion.
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs md:text-sm font-medium tracking-tight animate-bounce cursor-pointer">
@@ -94,7 +94,7 @@ const Office = () => {
                          />
                          <text className="text-[14px] uppercase font-bold tracking-[0.2em] fill-[#1c1c1c]">
                            <textPath href="#textPath" startOffset="0%">
-                             Since 2016 • Leading Digital Agency •
+                             Since 2016 • Leading •
                            </textPath>
                          </text>
                       </svg>
@@ -131,32 +131,29 @@ const Office = () => {
               
               {/* Col 1: Title */}
               <div className="md:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Designing Services</h3>
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Residential & Commercial Fit-Out</h3>
               </div>
 
               {/* Col 2: Description */}
               <div className="md:col-span-5">
                 <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#4a4a4a]">
-                  Bold Creatives delivers Designing services that don’t just tick boxes—they redefine expectations. 
-                  From high-converting Homes to immersive office experiences, we bring your vision to life with precision and impact. 
-                  Our approach goes beyond the homes, creating Designing solutions that resonate, engage, and leave a lasting impression. 
-                  For brands ready to stand out, we’re here to make it happen.
+We provide complete interior fit-out solutions for residential and commercial spaces, including villas, apartments, offices, retail outlets, and showrooms. Our fit-out services cover planning, site execution, finishing works, and installations, ensuring every project is delivered with quality craftsmanship, technical accuracy, and on-time completion.
                 </p>
               </div>
 
               {/* Col 3: List & Tag */}
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={left1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <img src={img1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
 
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
-                   <span className="text-xs font-medium text-[#a1a1a1]">(Premium & Bold)</span>
+                   
                 </div>
               </div>
 
             </div>
           </div>
 
-          {/* Block 2 */}
+
           <div className='mt-10'>
             <div className="text-lg md:text-2xl font-medium text-[#1c1c1c] mb-4">
               (02)
@@ -164,20 +161,19 @@ const Office = () => {
             <div className="w-full h-[1px] bg-[#d4d4d4] mb-12"></div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12">
               <div className="md:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Designing Services</h3>
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Interior Design Solutions
+</h3>
               </div>
               <div className="md:col-span-5">
                 <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#4a4a4a]">
-                  Bold Creatives delivers Designing services that don’t just tick boxes—they redefine expectations. 
-                  From high-converting Homes to immersive office experiences, we bring your vision to life with precision and impact. 
-                  Our approach goes beyond the homes, creating Designing solutions that resonate, engage, and leave a lasting impression. 
-                  For brands ready to stand out, we’re here to make it happen.
+Our interior design services focus on creating spaces that are functional, visually appealing, and aligned with your lifestyle or brand identity. From concept development and layout planning to material selection and detailed design, we ensure every design solution is practical, cohesive, and tailored to your specific requirements.
+
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={left1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <img src={img2} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
-                   <span className="text-xs font-medium text-[#a1a1a1]">(Premium & Bold)</span>
+                   
                 </div>
               </div>
             </div>
@@ -191,20 +187,17 @@ const Office = () => {
             <div className="w-full h-[1px] bg-[#d4d4d4] mb-12"></div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12">
               <div className="md:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Designing Services</h3>
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Custom Furniture Manufacturing</h3>
               </div>
               <div className="md:col-span-5">
                 <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#4a4a4a]">
-                  Bold Creatives delivers Designing services that don’t just tick boxes—they redefine expectations. 
-                  From high-converting Homes to immersive office experiences, we bring your vision to life with precision and impact. 
-                  Our approach goes beyond the homes, creating Designing solutions that resonate, engage, and leave a lasting impression. 
-                  For brands ready to stand out, we’re here to make it happen.
+We design and manufacture bespoke furniture that fits seamlessly into your space. Our custom furniture solutions include wardrobes, kitchens, storage units, and specialized joinery, crafted using quality materials and precise workmanship to meet both aesthetic and functional needs.
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={left1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <img src={img3} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
-                   <span className="text-xs font-medium text-[#a1a1a1]">(Premium & Bold)</span>
+                   
                 </div>
               </div>
             </div>
@@ -217,20 +210,40 @@ const Office = () => {
             <div className="w-full h-[1px] bg-[#d4d4d4] mb-12"></div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12">
               <div className="md:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Designing Services</h3>
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Space Planning & 3D Visualization</h3>
               </div>
               <div className="md:col-span-5">
                 <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#4a4a4a]">
-                  Bold Creatives delivers Designing services that don’t just tick boxes—they redefine expectations. 
-                  From high-converting Homes to immersive office experiences, we bring your vision to life with precision and impact. 
-                  Our approach goes beyond the homes, creating Designing solutions that resonate, engage, and leave a lasting impression. 
-                  For brands ready to stand out, we’re here to make it happen.
+We offer smart space planning and realistic 3D visualizations to help clients clearly understand the final look and layout before execution begins. Our 3D designs allow better decision-making regarding space usage, materials, finishes, and overall design flow.
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={left1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <img src={img4} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
-                   <span className="text-xs font-medium text-[#a1a1a1]">(Premium & Bold)</span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='mt-10'>
+            <div className="text-lg md:text-2xl font-medium text-[#1c1c1c] mb-4">
+              (05)
+            </div>
+            <div className="w-full h-[1px] bg-[#d4d4d4] mb-12"></div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12">
+              <div className="md:col-span-3">
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">Turnkey Project Execution</h3>
+              </div>
+              <div className="md:col-span-5">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#4a4a4a]">
+Our turnkey solutions cover the entire interior project lifecycle — from design and material procurement to execution and final handover. We manage coordination, timelines, and quality control, providing clients with a smooth, efficient, and hassle-free interior experience.
+                </p>
+              </div>
+              <div className="md:col-span-4 flex flex-col justify-between h-full">
+                <img src={img5} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
+                   
                 </div>
               </div>
             </div>

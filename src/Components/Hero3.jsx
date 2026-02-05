@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import right2 from '../assets/right2.jpg';
-import left2 from '../assets/left2.jpg';
-import hero from '../assets/hero.jpg';
+import IMG_5079 from '../assets/IMG_5079.jpg';
+import IMG_5078 from '../assets/IMG_5078.png';
+import IMG_5080 from '../assets/IMG_5080.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,13 +85,13 @@ export default function Hero3() {
   const TextContent = ({ colorClass }) => (
     <>
       <div className={`energy-text text-1 ${colorClass}`}>
-        <h1>Amazing</h1> <h1 className="-mt-2 md:-mt-10">designs</h1>
+        <h1>Design</h1> <h1 className="-mt-2 md:-mt-10">Excellence</h1>
       </div>
       <div className={`energy-text text-2 ${colorClass}`}>
         <h1>Futuristic</h1> <h1 className="-mt-2 md:-mt-10">Interior</h1>
       </div>
       <div className={`energy-text text-3 ${colorClass}`}>
-        <h1>Affordable</h1> <h1 className="-mt-2 md:-mt-10">Energy</h1>
+        <h1>Cost-Effective</h1> <h1 className="-mt-2 md:-mt-10">Interiors</h1>
       </div>
     </>
   );
@@ -111,25 +111,25 @@ export default function Hero3() {
 
             {/* WRAPPER 1 */}
             <div className="energy-img img-1">
-              <img src={hero} className="img-cover" alt="hero" />
+              <img src={IMG_5080} className="img-cover" alt="IMG_5080" />
               <h1 className="energy-text2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Well-planned interiors where aesthetics, comfort, and functionality come together seamlessly.
               </h1>
             </div>
 
             {/* WRAPPER 2 */}
             <div className="energy-img img-2">
-              <img src={left2} className="img-cover" alt="left2" />
+              <img src={IMG_5078} className="img-cover" alt="IMG_5078" />
               <h1 className="energy-text2">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Our designs embrace modern materials, clean lines, and smart layouts to create interiors that feel contemporary, efficient, and future-ready.
               </h1>
             </div>
 
             {/* WRAPPER 3 */}
             <div className="energy-img img-3">
-              <img src={right2} className="img-cover" alt="right2" />
+              <img src={IMG_5079} className="img-cover" alt="IMG_5079" />
               <h1 className="energy-text2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+We create interiors that balance quality, design, and budget — delivering smart solutions that look premium without unnecessary cost.
               </h1>
             </div>
 

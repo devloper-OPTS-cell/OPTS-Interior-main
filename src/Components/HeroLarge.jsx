@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import right1 from '../assets/right1.jpg'
-import left1 from '../assets/left1.jpg'
-import right2 from '../assets/right2.jpg'
-import left2 from '../assets/left2.jpg'
-import hero from '../assets/hero.jpg'
+import right1 from '../assets/right1.webp'
+import left1 from '../assets/left1.webp'
+import right2 from '../assets/right2.webp'
+import left2 from '../assets/left2.webp'
+// import hero from '../assets/hero.webp'
 import { ArrowDown } from "lucide-react";
+
+import hero from '../assets/site.mp4'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -108,13 +110,20 @@ export default function HeroLarge() {
         <div className="absolute inset-2 z-[5] bg-gradient-to-t from-black/70 via-black/20 to-transparent rounded-xl pointer-events-none" />
         
         <div ref={textRef} className="absolute h-full w-[50vw] z-10 text-white flex flex-col justify-end items-start p-20 ">
-          <h1 className="text-5xl leading-tight">Building designed spaces with precision for you. </h1>
+          <h1 className="text-5xl leading-tight">Designing Spaces That Reflect Precision & Elegance. </h1>
           <p className="text-lg mb-20 text-xl w-[35vw] border-t mt-2 leading-tight"> 
-            At OTPS Express Interior we build inspiration of your dreams into reality. 
+            From concept to completion, OPTS Express Interior delivers refined interior solutions with attention to every detail.
           </p>
           <p> <ArrowDown size={34} /> </p>
         </div>
-        <img className="rounded-xl relative w-full h-full object-cover" src={hero} alt="Hero" />
+        <video 
+          autoPlay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          // poster="/images/hero-poster.webp"
+        className="rounded-xl relative w-full h-full object-cover" src={hero} alt="Hero" />
       </div>
 
       {/* GRID CONTENT */}

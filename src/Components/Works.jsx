@@ -2,58 +2,64 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import img1 from '../assets/projects/IMG_4983.png'
+import img2 from '../assets/projects/IMG_5184.jpg'
+import img3 from '../assets/projects/IMG_5186.jpg'
+import img4 from '../assets/projects/IMG_5188.jpg'
+import img5 from '../assets/projects/IMG_5189.jpg'
+import img6 from '../assets/projects/IMG_1232.jpg'
 
 const projects = [
   {
     id: 1,
-    title: "Vibrant",
-    category: "Unified branding and website for a health and longevity practice",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop", 
+    title: "Gulfood Dubai: Azerbaijan Pavilion",
+    category: "Modern cultural design showcasing premium food brands with professional craftsmanship.",
+    image: img1,
     bgColor: "#E3CAA5",
     rotate: -10,
     zIndex: 1,
   },
   {
     id: 2,
-    title: "Just Salad",
-    category: "Playful web experience bringing BBMG's iconic branding to life",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop", 
+    title: "Luxury Villa Outdoor Design",
+    category: "Modern resort-style living featuring premium materials and elegant outdoor functionality.",
+    image: img2, 
     bgColor: "#95B2B0",
     rotate: -5,
     zIndex: 2,
   },
   {
     id: 3,
-    title: "Eppright Homes",
-    category: "Premium digital showcase for a custom homebuilder",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop", 
+    title: "Bespoke Modern Luxury Bedroom",
+    category: "Serene five-star retreat featuring premium textures and meticulous custom craftsmanship.",
+    image: img3, 
     bgColor: "#F1F0EA",
     rotate: 0,
     zIndex: 3,
   },
   {
     id: 4,
-    title: "PBS - North Carolina",
-    category: "Interactive website for a storied regional broadcaster",
-    image: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?q=80&w=800&auto=format&fit=crop", 
+    title: "Luxury Spa-Like Villa Bathroom",
+    category: "Elegant marble retreat featuring custom fluted vanities and modern precision.",
+    image: img4, 
     bgColor: "#1A1A1A",
     rotate: 5,
     zIndex: 2,
   },
   {
     id: 5,
-    title: "Titan",
-    category: "Webflow redesign for a modern RIA growth platform",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop", 
+    title: "Minimalist Modern Dining Space",
+    category: "Warm wooden accents and cove lighting create a sophisticated dining atmosphere.",
+    image: img6, 
     bgColor: "#D4D4D4",
     rotate: 10,
     zIndex: 1,
   },
   {
     id: 6,
-    title: "Titan",
-    category: "Webflow redesign for a modern RIA growth platform",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop", 
+    title: "Villa Entertainment Lounge",
+    category: "Bold industrial-chic space blending high-end entertainment with modern comfort.",
+    image: img5, 
     bgColor: "#D4D4D4",
     rotate: 15,
     zIndex: 0,

@@ -1,16 +1,28 @@
 import React from 'react';
+import accor from '../assets/logos_client/Accor_logo.svg-removebg-preview.png';
+import booking from '../assets/logos_client/Booking-Logo-removebg-preview.png';
+import google from '../assets/logos_client/google-removebg-preview.png';
+import huawei from '../assets/logos_client/huawei-logo-picture-41-removebg-preview.png';
+import juniper from '../assets/logos_client/juniper-removebg-preview.png';
+import lenovo from '../assets/logos_client/lenovo-removebg-preview.png';
+import wyndham from '../assets/logos_client/wyndham-removebg-preview.png';
+import bighill from '../assets/logos_client/bighill-removebg-preview.png';
+import qog from '../assets/logos_client/qog-1-removebg-preview.png';
+import karam from '../assets/logos_client/karam-removebg-preview.png';
+
+
 
 const logos = [
-  'https://ail-media2.b-cdn.net/1.png',
-  'https://ail-media2.b-cdn.net/2.png',
-  'https://ail-media2.b-cdn.net/11.png',
-  'https://ail-media2.b-cdn.net/4.png',
-  'https://ail-media2.b-cdn.net/5.png',
-  'https://ail-media2.b-cdn.net/6.png',
-  'https://ail-media2.b-cdn.net/7.png',
-  'https://ail-media2.b-cdn.net/8.png',
-  'https://ail-media2.b-cdn.net/9.png',
-  'https://ail-media2.b-cdn.net/10.png',
+  accor,
+  booking,
+  google,
+  huawei,
+  juniper,
+  lenovo,
+  wyndham,
+  bighill,
+  qog,
+  karam
 ];
 
 function Clients() {
@@ -26,7 +38,7 @@ function Clients() {
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center">
             <img 
-              className='w-full max-w-[180px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-300' 
+              className='w-full max-w-[180px] h-auto object-contain ' 
               src={logo} 
               alt={`Client ${index + 1}`} 
             />

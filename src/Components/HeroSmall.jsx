@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown } from "lucide-react";
-import hero from '../assets/hero.jpg';
+import hero from '../assets/site.mp4'
 
 function HeroSmall() {
   return (
@@ -15,7 +15,7 @@ function HeroSmall() {
         <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 md:p-20">
           <div className="max-w-4xl">
             <h1 className="text-white text-4xl md:text-6xl  sm:leading-tight mb-4 drop-shadow-md">
-              Building designed spaces with precision for you.
+              Designing Spaces That Reflect Precision & Elegance
             </h1>
             
             <div className="border-t border-white/40 pt-4 mb-8 max-w-sm">
