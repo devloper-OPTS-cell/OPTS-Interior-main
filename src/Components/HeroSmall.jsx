@@ -31,11 +31,16 @@ function HeroSmall() {
         </div>
 
         {/* Background Image */}
-        <img 
-          className="w-full h-full object-cover" 
-          src={hero} 
-          alt="Interior Design Hero" 
-        />
+<video 
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="relative w-full h-full object-cover rounded-xl"
+  src={hero}
+/>
+
       </div>
     </section>
   );
