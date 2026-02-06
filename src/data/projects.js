@@ -1,4 +1,4 @@
-import { cdn } from "../utils/cdn";
+import { cdn } from "../utils/cdn.js";
 
 export const projects = [
   {

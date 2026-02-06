@@ -76,7 +76,7 @@ function ContactUs() {
         {/* LEFT SIDE: Text is now Dark Blue (#032859) to be visible on white bg */}
         <div className="text-[#032859] space-y-8 mt-4 lg:mt-20">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-normal">Contact OPTS Interior Design</h1>
+            <h1 className="text-4xl md:text-5xl font-normal">Contact Us</h1>
             <p className="text-[#032859]/80 text-lg leading-relaxed max-w-md">
               Not sure what you need? The team at OPTS will be happy to listen to you and suggest event ideas you hadn't considered.
             </p>

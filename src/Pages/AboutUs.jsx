@@ -64,7 +64,7 @@ const AboutUs = () => {
         <div className="mb-24">
           {/* HEADING: Blue to match Footer */}
           <h1 className="text-4xl sm:text-8xl font-bold font-grotesk mb-12 ">
-            About OPTS Interior Design
+            About Us
           </h1>
           <div className="rounded-3xl overflow-hidden mb-16 shadow-2xl">
             <img

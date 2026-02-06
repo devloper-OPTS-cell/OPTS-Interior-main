@@ -24,13 +24,13 @@ export default function HeroLarge() {
   const rightRef = useRef([])
 
   const leftImages = [
-    { src: left1, w: "28vw", h: "29vh", x: "-7.5vw", y: "-45vh", iw: 7990, ih: 5327 },
-    { src: left2, w: "22vw", h: "25vh", x: "-1.5vw", y: "-15vh", iw: 5376, ih: 3584 },
+    { src: left1, alt: "Interior design detail", w: "28vw", h: "29vh", x: "-7.5vw", y: "-45vh", iw: 7990, ih: 5327 },
+    { src: left2, alt: "Luxury interior detail", w: "22vw", h: "25vh", x: "-1.5vw", y: "-15vh", iw: 5376, ih: 3584 },
   ]
 
   const rightImages = [
-    { src: right1, w: "22vw", h: "25vh", x: "9.5vw", y: "-9vh", iw: 3000, ih: 2000 },
-    { src: right2, w: "28vw", h: "29vh", x: "9.5vw", y: "17vh", iw: 4096, ih: 2800 },
+    { src: right1, alt: "Modern interior detail", w: "22vw", h: "25vh", x: "9.5vw", y: "-9vh", iw: 3000, ih: 2000 },
+    { src: right2, alt: "Premium interior detail", w: "28vw", h: "29vh", x: "9.5vw", y: "17vh", iw: 4096, ih: 2800 },
   ]
 
   useEffect(() => {
@@ -127,6 +127,8 @@ export default function HeroLarge() {
           playsInline
           preload="metadata"
           poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
+          title="OPTS Interior hero video"
+          aria-label="OPTS Interior hero video"
           className="rounded-xl relative w-full h-full object-cover"
         >
           <source src={heroWebm} type="video/webm" />
@@ -145,7 +147,7 @@ export default function HeroLarge() {
             >
               <img
                 src={img.src}
-                alt=""
+                alt={img.alt}
                 width={img.iw}
                 height={img.ih}
                 loading="lazy"
@@ -165,7 +167,7 @@ export default function HeroLarge() {
             >
               <img
                 src={img.src}
-                alt=""
+                alt={img.alt}
                 width={img.iw}
                 height={img.ih}
                 loading="lazy"

@@ -15,7 +15,7 @@ function WorksPage() {
       />
       {/* Header */}
       <h1 className="text-5xl md:text-8xl font-bold font-grotesk mb-12 md:mb-24 text-center md:text-left">
-        Interior Design Projects in Dubai
+        Our Top Works
       </h1>
 
       {/* Grid Layout */}

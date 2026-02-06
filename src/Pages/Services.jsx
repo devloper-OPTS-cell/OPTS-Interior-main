@@ -47,7 +47,7 @@ const Office = () => {
 
             {/* Hero Typography */}
             <h1 className="text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] tracking-tighter font-medium">
-              <span className="ml-0 md:ml-32 lg:ml-58">Shaping functional </span> 
+              <span className="ml-0 md:ml-32 lg:ml-58">shaping functional </span> 
               <br className="hidden md:block" />
               <span> interiors for homes, offices, </span> 
               <br className="hidden md:block" />

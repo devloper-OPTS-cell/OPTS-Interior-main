@@ -66,6 +66,45 @@ const faqs = [
   },
 ];
 
+const keywordTags = [
+  "Interior design company",
+  "Interior fit out company",
+  "Residential interior design",
+  "Commercial interior fit out",
+  "Turnkey interior solutions",
+  "Fit out contractors",
+  "Custom furniture design",
+  "Home interior design company",
+  "Office interior fit out",
+  "Exhibition stand design",
+  "Interior design company in Dubai",
+  "Fit out company in Dubai",
+  "Best interior designers in Dubai",
+  "Dubai fit out contractors",
+  "Home renovation Dubai",
+  "Office fit out Dubai",
+  "Exhibition stand contractor Dubai",
+  "Event setup company Dubai",
+  "Villa interior design Dubai",
+  "Commercial interior design UAE",
+  "Luxury home interiors",
+  "Villa interior design",
+  "Apartment interior design",
+  "Modern home interiors",
+  "Kitchen interior design",
+  "Bedroom interior design",
+  "Bespoke furniture design",
+  "Joinery works Dubai",
+  "Carpentry services Dubai",
+  "Best interior fit out company in Dubai",
+  "Affordable interior design services Dubai",
+  "Luxury interior design company UAE",
+  "Turnkey fit out solutions Dubai",
+  "Professional interior contractors Dubai",
+  "Top Office Interior Trends in Dubai 2026",
+  "How to Choose a Fit Out Company in Dubai",
+];
+
 const Faq = () => {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-8 font-sans md:mt-10 mt-20">
@@ -78,10 +117,7 @@ const Faq = () => {
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         <div className="text-[#032859] space-y-8 mt-4 lg:mt-20">
           <div className="space-y-4">
-            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#032859]/70 border border-[#032859]/20 px-3 py-1 rounded-full">
-              FAQs
-            </span>
-            <h1 className="text-4xl md:text-5xl font-normal">Interior Design FAQs</h1>
+            <h1 className="text-4xl md:text-5xl font-normal">FAQs</h1>
             <p className="text-[#032859]/80 text-lg leading-relaxed max-w-md">
               Find quick answers about our interior design and fit-out process, timelines,
               materials, and execution standards in Dubai.
@@ -110,6 +146,22 @@ const Faq = () => {
               </Link>{" "}
               for a consultation.
             </p>
+          </div>
+
+          <div className="pt-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#032859]/60 mb-3">
+              Popular Search Topics
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {keywordTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs border border-[#032859]/20 text-[#032859]/80 rounded-full px-3 py-1"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

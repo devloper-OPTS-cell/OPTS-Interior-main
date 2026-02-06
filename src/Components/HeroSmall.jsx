@@ -40,6 +40,8 @@ function HeroSmall() {
   loop
   playsInline
   preload="metadata"
+  title="OPTS Interior hero video"
+  aria-label="OPTS Interior hero video"
   className="relative w-full h-full object-cover rounded-xl"
   poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
 >
