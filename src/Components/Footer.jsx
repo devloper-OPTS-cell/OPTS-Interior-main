@@ -3,12 +3,13 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaYoutube } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   const recipientEmail = "hello@optsinterior.com";
   const phoneNumber = "+971543430661";
+  const phoneNumberAlt = "+971502451051";
   const mapLink = "https://maps.app.goo.gl/YourCopiedLinkHere";
 
   return (
@@ -24,16 +25,16 @@ const Footer = () => {
           {/* Social Icons */}
 {/* Social Icons */}
 <div className="flex justify-center md:justify-start gap-6">
-  <a href="#" className="hover:text-blue-400 transition-colors">
+  <a href="https://www.linkedin.com/in/opts-interior-2bba223a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
     <FaLinkedin size={28} className="sm:size-6 md:size-7 lg:size-8" />
   </a>
-  <a href="#" className="hover:text-pink-500 transition-colors">
+  <a href="https://www.instagram.com/opts.interior?igsh=cTRvZzB5YTU5Y3oz&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors">
     <RiInstagramFill size={28} className="sm:size-6 md:size-7 lg:size-8" />
   </a>
-  <a href="#" className="hover:text-red-600 transition-colors">
-    <FaYoutube size={28} className="sm:size-6 md:size-7 lg:size-8" />
+  <a href="https://wa.me/971543430661" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
+    <FaWhatsapp size={28} className="sm:size-6 md:size-7 lg:size-8" />
   </a>
-  <a href="#" className="hover:text-blue-600 transition-colors">
+  <a href="https://www.facebook.com/profile.php?id=61587386516999" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
     <FaFacebookSquare size={28} className="sm:size-6 md:size-7 lg:size-8" />
   </a>
 </div>
@@ -58,6 +59,10 @@ const Footer = () => {
             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center md:justify-start gap-2 hover:opacity-80">
               <Phone size={16} />
               +971 543 430 661
+            </a>
+            <a href={`tel:${phoneNumberAlt}`} className="flex items-center justify-center md:justify-start gap-2 hover:opacity-80">
+              <Phone size={16} />
+              +971 50 245 1051
             </a>
 
             <a

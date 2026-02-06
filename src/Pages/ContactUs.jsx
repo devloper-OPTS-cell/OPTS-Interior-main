@@ -12,6 +12,7 @@ function ContactUs() {
 
     const recipientEmail = "hello@optsinterior.com"
     const phoneNumber = "+971543430661"
+    const phoneNumberAlt = "+971502451051"
     const mapLink = "https://maps.app.goo.gl/YourCopiedLinkHere"
 
   const handleChange = (e) => {
@@ -81,10 +82,16 @@ function ContactUs() {
           <h1 className='text-xl'>hello@optsinterior.com</h1>
         </button>
       </a>
-      <a href={`tel:${phoneNumber}`}>
+    <a href={`tel:${phoneNumber}`}>
       <button className='flex items-center gap-2 cursor-pointer'>
         <Phone size={27} />
-        <h1 className='text-xl'>+9715434306616</h1>
+        <h1 className='text-xl'>+971543430661</h1>
+      </button>
+    </a>
+    <a href={`tel:${phoneNumberAlt}`}>
+      <button className='flex items-center gap-2 cursor-pointer'>
+        <Phone size={27} />
+        <h1 className='text-xl'>+97150 245 1051</h1>
       </button>
     </a>
     <a  

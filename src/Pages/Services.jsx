@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react'; 
 import left1 from '../assets/left1.jpg'; 
-import img1 from '../assets/services/IMG_5070.webp'
-import img2 from '../assets/services/IMG_5083.jpg'
-import img3 from '../assets/services/IMG_5084.webp'
-import img4 from '../assets/services/IMG_5069.webp'
-import img5 from '../assets/services/IMG_5071.webp'
+const img1 = "https://images.unsplash.com/photo-1718220268527-4477fd170775?auto=format&fit=crop&w=1200&h=1200&q=80";
+const img2 = "https://images.unsplash.com/photo-1761910933264-654827238177?auto=format&fit=crop&w=1200&h=1200&q=80";
+const img3 = "https://images.unsplash.com/photo-1769430838075-4bbbd79f914b?auto=format&fit=crop&w=1200&h=1200&q=80";
+const img4 = "https://images.unsplash.com/photo-1752254873720-833814859969?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000";
+const img5 = "https://images.unsplash.com/photo-1744126405290-76d0fd6030c2?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000";
 
 const Office = () => {
   return (
@@ -143,7 +143,9 @@ We provide complete interior fit-out solutions for residential and commercial sp
 
               {/* Col 3: List & Tag */}
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={img1} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="w-full aspect-square overflow-hidden rounded-sm bg-[#e6e6e6] mb-4">
+                  <img src={img1} alt="Residential and commercial fit-out" className="w-full h-full object-cover opacity-85" />
+                </div>
 
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
                    
@@ -171,7 +173,9 @@ Our interior design services focus on creating spaces that are functional, visua
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={img2} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="w-full aspect-square overflow-hidden rounded-sm bg-[#e6e6e6] mb-4">
+                  <img src={img2} alt="Interior design materials and samples" className="w-full h-full object-cover opacity-85" />
+                </div>
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
                    
                 </div>
@@ -195,7 +199,9 @@ We design and manufacture bespoke furniture that fits seamlessly into your space
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={img3} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="w-full aspect-square overflow-hidden rounded-sm bg-[#e6e6e6] mb-4">
+                  <img src={img3} alt="Custom furniture manufacturing workshop" className="w-full h-full object-cover opacity-85" />
+                </div>
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
                    
                 </div>
@@ -218,7 +224,9 @@ We offer smart space planning and realistic 3D visualizations to help clients cl
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={img4} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="w-full aspect-square overflow-hidden rounded-sm bg-[#e6e6e6] mb-4">
+                  <img src={img4} alt="Space planning and 3D visualization" className="w-full h-full object-cover opacity-85" />
+                </div>
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
                    
                 </div>
@@ -241,7 +249,9 @@ Our turnkey solutions cover the entire interior project lifecycle — from desig
                 </p>
               </div>
               <div className="md:col-span-4 flex flex-col justify-between h-full">
-                <img src={img5} alt="" className="w-full h-auto object-cover opacity-80 mb-4" />
+                <div className="w-full aspect-square overflow-hidden rounded-sm bg-[#e6e6e6] mb-4">
+                  <img src={img5} alt="Turnkey project execution" className="w-full h-full object-cover opacity-85" />
+                </div>
                 <div className="mt-8 md:mt-12 flex justify-end md:justify-end">
                    
                 </div>

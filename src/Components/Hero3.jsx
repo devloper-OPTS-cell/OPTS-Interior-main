@@ -16,7 +16,7 @@ export default function Hero3() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=300%",
+          end: "+=140%",
           pin: true,
           scrub: true,
         }
@@ -35,7 +35,7 @@ export default function Hero3() {
       });
 
       // 🟡 HOLD img-1
-      tl.to({}, { duration: 1 });
+      tl.to({}, { duration: 0.35 });
 
       // 🔵 img-1 → img-2
       tl.to(".img-2", { opacity: 1, duration: 0.7, ease: "power1.out" })
@@ -44,7 +44,7 @@ export default function Hero3() {
         .to(".text-2", { clipPath: "inset(0 0 0% 0)", opacity: 1, duration: 0.01 }, "<");
 
       // 🟡 HOLD img-2
-      tl.to({}, { duration: 1 });
+      tl.to({}, { duration: 0.35 });
 
       // 🔵 img-2 → img-3
       tl.to(".img-3", { opacity: 1, duration: 0.7, ease: "power1.out" })
@@ -53,7 +53,7 @@ export default function Hero3() {
         .to(".text-3", { clipPath: "inset(0 0 0% 0)", opacity: 1, duration: 0.01 }, "<");
 
       // 🟡 HOLD img-3
-      tl.to({}, { duration: 1 });
+      tl.to({}, { duration: 0.35 });
 
       // ✅ refresh ONLY after images load
       const images = sectionRef.current.querySelectorAll("img");
