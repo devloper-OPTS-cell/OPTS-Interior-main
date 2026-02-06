@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import IMG_5079 from '../assets/IMG_5079.jpg';
-import IMG_5078 from '../assets/IMG_5078.png';
-import IMG_5080 from '../assets/IMG_5080.jpg';
+import { cdn } from '../utils/cdn';
+
+const IMG_5079 = cdn("IMG_5079.webp");
+const IMG_5078 = cdn("IMG_5078.webp");
+const IMG_5080 = cdn("IMG_5080.webp");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,7 +113,15 @@ export default function Hero3() {
 
             {/* WRAPPER 1 */}
             <div className="energy-img img-1">
-              <img src={IMG_5080} className="img-cover" alt="IMG_5080" />
+              <img
+                src={IMG_5080}
+                className="img-cover"
+                alt="IMG_5080"
+                width={1000}
+                height={563}
+                loading="lazy"
+                decoding="async"
+              />
               <h1 className="energy-text2">
 Well-planned interiors where aesthetics, comfort, and functionality come together seamlessly.
               </h1>
@@ -119,7 +129,15 @@ Well-planned interiors where aesthetics, comfort, and functionality come togethe
 
             {/* WRAPPER 2 */}
             <div className="energy-img img-2">
-              <img src={IMG_5078} className="img-cover" alt="IMG_5078" />
+              <img
+                src={IMG_5078}
+                className="img-cover"
+                alt="IMG_5078"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                decoding="async"
+              />
               <h1 className="energy-text2">
 Our designs embrace modern materials, clean lines, and smart layouts to create interiors that feel contemporary, efficient, and future-ready.
               </h1>
@@ -127,7 +145,15 @@ Our designs embrace modern materials, clean lines, and smart layouts to create i
 
             {/* WRAPPER 3 */}
             <div className="energy-img img-3">
-              <img src={IMG_5079} className="img-cover" alt="IMG_5079" />
+              <img
+                src={IMG_5079}
+                className="img-cover"
+                alt="IMG_5079"
+                width={1200}
+                height={639}
+                loading="lazy"
+                decoding="async"
+              />
               <h1 className="energy-text2">
 We create interiors that balance quality, design, and budget — delivering smart solutions that look premium without unnecessary cost.
               </h1>

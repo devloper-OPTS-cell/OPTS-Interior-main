@@ -1,5 +1,7 @@
 import React from 'react';
-import right1 from '../assets/right1.jpg';
+import { cdn } from '../utils/cdn';
+
+const right1 = cdn("right1.webp");
 
 // --- PLACEHOLDER IMAGES ---
 const founderImg = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop";
@@ -12,7 +14,13 @@ const TeamMember = ({ image, role, description, isReversed }) => (
   <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-16 items-center `}>
     <div className="w-full md:w-1/3 flex-shrink-0">
       <div className="aspect-[4/4.1] rounded-2xl overflow-hidden shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
-        <img src={image} alt={role} className="w-full h-full object-cover" />
+        <img
+          src={image}
+          alt={role}
+          className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
     <div className="w-full md:w-2/3 flex flex-col justify-center">
@@ -55,6 +63,11 @@ const AboutUs = () => {
               src={right1}
               alt="OPTS Interior Design showcased space"
               className="w-full h-64 sm:h-[400px] object-cover"
+              width={3000}
+              height={2000}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
           <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-20">

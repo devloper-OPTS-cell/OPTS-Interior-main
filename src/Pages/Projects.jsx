@@ -1,47 +1,61 @@
 import React from 'react';
-import img1 from '../assets/projects/IMG_4983.png'
-import img2 from '../assets/projects/IMG_5184.jpg'
-import img3 from '../assets/projects/IMG_5186.jpg'
-import img4 from '../assets/projects/IMG_5188.jpg'
-import img5 from '../assets/projects/IMG_5189.jpg'
-import img6 from '../assets/projects/IMG_1232.jpg'
+import { cdn } from '../utils/cdn';
+
+const img1 = cdn("IMG_4983.webp");
+const img2 = cdn("IMG_5184.webp");
+const img3 = cdn("IMG_5186.webp");
+const img4 = cdn("IMG_5188.webp");
+const img5 = cdn("IMG_5189.webp");
+const img6 = cdn("IMG_1232.webp");
 
 const worksData = [
   {
     id: '01',
     title: "Gulfood Dubai: Azerbaijan Pavilion",
     category: "A refined cultural pavilion celebrating Azerbaijan’s premium food brands with elegant exhibition layouts, warm material tones, and precision-built detailing. The space blends modern presentation with handcrafted finishes to create an upscale, welcoming experience for visitors.",
-    img: img1
+    img: img1,
+    width: 5712,
+    height: 4284
   },
   {
     id: '02',
     title: "Luxury Villa Outdoor Design",
     category: "Resort-inspired outdoor living designed for comfort and sophistication, featuring premium stone, rich textures, and tailored lighting. The layout balances open-air relaxation with functional zones for dining, lounging, and entertaining in a private villa setting.",
-    img: img2
+    img: img2,
+    width: 1280,
+    height: 720
   },
   {
     id: '03',
         title: "Bespoke Modern Luxury Bedroom",
     category: "A calm, five‑star bedroom retreat defined by bespoke millwork, layered textures, and soft ambient lighting. Every element is tailored for comfort and refinement, from the custom headboard to the finely detailed joinery and finishes.",
-    img: img3
+    img: img3,
+    width: 1280,
+    height: 960
   },
   {
     id: '04',
     title: "Luxury Spa-Like Villa Bathroom",
     category: "A spa‑inspired bathroom with elegant marble surfaces, custom fluted vanities, and clean architectural lines. The design emphasizes serenity and precision, combining high‑end materials with a refined, minimalist layout.",
-    img: img4
+    img: img4,
+    width: 960,
+    height: 1280
   },
   {
     id: '05',
     title: "Minimalist Modern Dining Space",
     category: "A minimalist dining environment elevated by warm wood tones, soft cove lighting, and a balanced material palette. The space is designed for modern entertaining with a clean, sophisticated aesthetic that feels both intimate and luxurious.",
-    img: img5
+    img: img5,
+    width: 1280,
+    height: 960
   },
   {
     id: '06',
     title: "Villa Entertainment Lounge",
     category: "An industrial‑chic entertainment lounge that pairs bold textures with high‑end comfort. Thoughtful lighting, tailored built‑ins, and a streamlined layout create a premium setting for media, gatherings, and relaxed social evenings.",
-    img: img6
+    img: img6,
+    width: 1280,
+    height: 1280
   },
 ];
 
@@ -71,6 +85,10 @@ function WorksPage() {
                   src={work.img}
                   alt={work.title}
                   className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  width={work.width}
+                  height={work.height}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

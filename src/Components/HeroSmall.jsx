@@ -1,6 +1,9 @@
 import React from 'react';
 import { ArrowDown } from "lucide-react";
-import hero from '../assets/IMG_5250.mp4'
+import { cdn } from '../utils/cdn';
+
+const heroWebm = cdn("IMG_5250-720p.webm");
+const heroMp4 = cdn("IMG_5250-720p.mp4");
 
 function HeroSmall() {
   return (
@@ -36,10 +39,13 @@ function HeroSmall() {
   muted
   loop
   playsInline
-  preload="auto"
+  preload="metadata"
   className="relative w-full h-full object-cover rounded-xl"
-  src={hero}
-/>
+  poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
+>
+  <source src={heroWebm} type="video/webm" />
+  <source src={heroMp4} type="video/mp4" />
+</video>
 
       </div>
     </section>

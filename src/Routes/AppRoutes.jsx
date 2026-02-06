@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Routes, Route } from "react-router-dom";
-import Home from '../Pages/Home';
-import AboutUs from '../Pages/AboutUs';
-import ContactUs from '../Pages/ContactUs';
-import Services from '../Pages/Services';
-import WorksPage from '../Pages/Projects';
+
+const Home = React.lazy(() => import('../Pages/Home'));
+const AboutUs = React.lazy(() => import('../Pages/AboutUs'));
+const ContactUs = React.lazy(() => import('../Pages/ContactUs'));
+const Services = React.lazy(() => import('../Pages/Services'));
+const WorksPage = React.lazy(() => import('../Pages/Projects'));
 
 function AppRoutes() {
 return (
-    <Routes>
-<Route path='/' element={<Home/>} />
-<Route path='/about-us' element={<AboutUs/>} />
-<Route path='/contact-us' element={<ContactUs/>} />
-<Route path='/services' element={<Services/>} />
-<Route path='/projects' element={<WorksPage/>} />
-    </Routes>
+    <Suspense fallback={<div className="min-h-screen bg-[#FBFBF9]" />}>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about-us' element={<AboutUs/>} />
+        <Route path='/contact-us' element={<ContactUs/>} />
+        <Route path='/services' element={<Services/>} />
+        <Route path='/projects' element={<WorksPage/>} />
+      </Routes>
+    </Suspense>
 )
 }
 

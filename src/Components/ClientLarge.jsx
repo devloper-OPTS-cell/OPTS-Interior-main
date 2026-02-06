@@ -1,14 +1,16 @@
 import React from 'react';
-import accor from '../assets/logos_client/Accor_logo.svg-removebg-preview.png';
-import booking from '../assets/logos_client/Booking-Logo-removebg-preview.png';
-import google from '../assets/logos_client/google-removebg-preview.png';
-import huawei from '../assets/logos_client/huawei-logo-picture-41-removebg-preview.png';
-import juniper from '../assets/logos_client/juniper-removebg-preview.png';
-import lenovo from '../assets/logos_client/lenovo-removebg-preview.png';
-import wyndham from '../assets/logos_client/wyndham-removebg-preview.png';
-import bighill from '../assets/logos_client/bighill-removebg-preview.png';
-import qog from '../assets/logos_client/qog-1-removebg-preview.png';
-import karam from '../assets/logos_client/karam-removebg-preview.png';
+import { cdn } from '../utils/cdn';
+
+const accor = cdn("Accor_logo.svg-removebg-preview.webp");
+const booking = cdn("Booking-Logo-removebg-preview.webp");
+const google = cdn("google-removebg-preview.webp");
+const huawei = cdn("huawei-logo-picture-41-removebg-preview.webp");
+const juniper = cdn("juniper-removebg-preview.webp");
+const lenovo = cdn("lenovo-removebg-preview.webp");
+const wyndham = cdn("wyndham-removebg-preview.webp");
+const bighill = cdn("bighill-removebg-preview.webp");
+const qog = cdn("qog-1-removebg-preview.webp");
+const karam = cdn("karam-removebg-preview.webp");
 
 
 
@@ -41,6 +43,10 @@ function Clients() {
               className='w-full max-w-[180px] h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300' 
               src={logo} 
               alt={`Client ${index + 1}`} 
+              width={632}
+              height={395}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         ))}

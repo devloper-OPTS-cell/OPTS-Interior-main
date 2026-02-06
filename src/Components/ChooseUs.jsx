@@ -1,13 +1,14 @@
 import React from 'react';
 import { ArrowRight, Award, Users, Handshake, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { cdn } from '../utils/cdn';
 
 // Placeholder imports for demo purposes - ensure these match your actual paths
-import right1 from '../assets/right1.jpg';
-import left1 from '../assets/left1.jpg';
-// import right2 from '../assets/right2.jpg';
-// import left2 from '../assets/left2.jpg';
-// import hero from '../assets/hero.jpg';
+const right1 = cdn("right1.webp");
+const left1 = cdn("left1.webp");
+// import right2 from '../assets/right2.webp';
+// import left2 from '../assets/left2.webp';
+// import hero from '../assets/hero.webp';
 
 const ChooseUs = () => {
   return (
@@ -51,6 +52,10 @@ With hands-on industry experience, skilled craftsmanship, and a detail-oriented 
               src={left1}
               alt="House Exterior with trees" 
               className="w-full h-full object-cover"
+              width={7990}
+              height={5327}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -60,6 +65,10 @@ With hands-on industry experience, skilled craftsmanship, and a detail-oriented 
               src={right1}
               alt="Outdoor shower detail" 
               className="w-full h-full object-cover"
+              width={3000}
+              height={2000}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

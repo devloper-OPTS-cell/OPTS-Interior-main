@@ -1,10 +1,12 @@
 // MainLayout.js
 import React, { useState, useEffect, useRef } from 'react';
 import Footer from '../Components/Footer';
-import logo from '../assets/logo.png';
+import { cdn } from '../utils/cdn';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, Instagram } from 'lucide-react'; // Added Instagram here
 import Lenis from 'lenis';
+
+const logo = cdn("logo.webp");
 
 function MainLayout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +29,16 @@ function MainLayout({ children }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Scroll to top on route change (use Lenis if available)
+  useEffect(() => {
+    const lenis = lenisRef.current;
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, [location.pathname]);
 
   // Global smooth scrolling (keeps native touch scrolling on mobile)
   useEffect(() => {
@@ -108,7 +120,11 @@ function MainLayout({ children }) {
                 
                 {/* Logo */}
                 <Link to="/" className="z-50 flex items-center"> 
-                  <img className='h-12 md:h-[68px] object-contain' src={logo} alt="Logo" /> 
+                  <img
+                    className='h-12 md:h-[68px] object-contain'
+                    src={logo}
+                    alt="Logo"
+                  /> 
                 </Link>
                 
                 {/* --- DESKTOP MENU (Hidden on Mobile) --- */}

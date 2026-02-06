@@ -10,6 +10,7 @@
   src: url('./assets/fonts/right-grotesk/RightGrotesk-CompactBlack.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 .font-grotesk {

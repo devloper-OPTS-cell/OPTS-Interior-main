@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import img1 from '../assets/projects/IMG_4983.png'
-import img2 from '../assets/projects/IMG_5184.jpg'
-import img3 from '../assets/projects/IMG_5186.jpg'
-import img4 from '../assets/projects/IMG_5188.jpg'
-import img5 from '../assets/projects/IMG_5189.jpg'
-import img6 from '../assets/projects/IMG_1232.jpg'
+import { cdn } from '../utils/cdn';
+
+const img1 = cdn("IMG_4983.webp");
+const img2 = cdn("IMG_5184.webp");
+const img3 = cdn("IMG_5186.webp");
+const img4 = cdn("IMG_5188.webp");
+const img5 = cdn("IMG_5189.webp");
+const img6 = cdn("IMG_1232.webp");
 
 const projects = [
   {
@@ -15,6 +17,8 @@ const projects = [
     title: "Gulfood Dubai: Azerbaijan Pavilion",
     category: "Modern cultural design showcasing premium food brands with professional craftsmanship.",
     image: img1,
+    width: 5712,
+    height: 4284,
     bgColor: "#E3CAA5",
     rotate: -10,
     zIndex: 1,
@@ -24,6 +28,8 @@ const projects = [
     title: "Luxury Villa Outdoor Design",
     category: "Modern resort-style living featuring premium materials and elegant outdoor functionality.",
     image: img2, 
+    width: 1280,
+    height: 720,
     bgColor: "#95B2B0",
     rotate: -5,
     zIndex: 2,
@@ -33,6 +39,8 @@ const projects = [
     title: "Bespoke Modern Luxury Bedroom",
     category: "Serene five-star retreat featuring premium textures and meticulous custom craftsmanship.",
     image: img3, 
+    width: 1280,
+    height: 960,
     bgColor: "#F1F0EA",
     rotate: 0,
     zIndex: 3,
@@ -42,6 +50,8 @@ const projects = [
     title: "Luxury Spa-Like Villa Bathroom",
     category: "Elegant marble retreat featuring custom fluted vanities and modern precision.",
     image: img4, 
+    width: 960,
+    height: 1280,
     bgColor: "#1A1A1A",
     rotate: 5,
     zIndex: 2,
@@ -51,6 +61,8 @@ const projects = [
     title: "Minimalist Modern Dining Space",
     category: "Warm wooden accents and cove lighting create a sophisticated dining atmosphere.",
     image: img6, 
+    width: 1280,
+    height: 1280,
     bgColor: "#D4D4D4",
     rotate: 10,
     zIndex: 1,
@@ -60,6 +72,8 @@ const projects = [
     title: "Villa Entertainment Lounge",
     category: "Bold industrial-chic space blending high-end entertainment with modern comfort.",
     image: img5, 
+    width: 1280,
+    height: 960,
     bgColor: "#D4D4D4",
     rotate: 15,
     zIndex: 0,
@@ -109,6 +123,10 @@ const Works = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
+                  width={project.width}
+                  height={project.height}
+                  loading="lazy"
+                  decoding="async"
                 />
                 {/* Mobile Text Overlay (Better UX for scrolling) */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-12">
@@ -158,6 +176,10 @@ const Works = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
+                      width={project.width}
+                      height={project.height}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 );

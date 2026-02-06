@@ -1,14 +1,16 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import right1 from '../assets/right1.webp'
-import left1 from '../assets/left1.webp'
-import right2 from '../assets/right2.webp'
-import left2 from '../assets/left2.webp'
+import { cdn } from '../utils/cdn'
 // import hero from '../assets/hero.webp'
 import { ArrowDown } from "lucide-react";
 
-import hero from '../assets/IMG_5250.mp4'
+const right1 = cdn("right1.webp");
+const left1 = cdn("left1.webp");
+const right2 = cdn("right2.webp");
+const left2 = cdn("left2.webp");
+const heroWebm = cdn("IMG_5250-720p.webm");
+const heroMp4 = cdn("IMG_5250-720p.mp4");
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,13 +22,13 @@ export default function HeroLarge() {
   const rightRef = useRef([])
 
   const leftImages = [
-    { src: left1, w: "28vw", h: "29vh", x: "-7.5vw", y: "-45vh" },
-    { src: left2, w: "22vw", h: "25vh", x: "-1.5vw", y: "-15vh" },
+    { src: left1, w: "28vw", h: "29vh", x: "-7.5vw", y: "-45vh", iw: 7990, ih: 5327 },
+    { src: left2, w: "22vw", h: "25vh", x: "-1.5vw", y: "-15vh", iw: 5376, ih: 3584 },
   ]
 
   const rightImages = [
-    { src: right1, w: "22vw", h: "25vh", x: "9.5vw", y: "-9vh" },
-    { src: right2, w: "28vw", h: "29vh", x: "9.5vw", y: "17vh" },
+    { src: right1, w: "22vw", h: "25vh", x: "9.5vw", y: "-9vh", iw: 3000, ih: 2000 },
+    { src: right2, w: "28vw", h: "29vh", x: "9.5vw", y: "17vh", iw: 4096, ih: 2800 },
   ]
 
   useEffect(() => {
@@ -120,10 +122,14 @@ export default function HeroLarge() {
           autoPlay
           muted
           loop
-          playsinline
-          preload="auto"
-          // poster="/images/hero-poster.webp"
-        className="rounded-xl relative w-full h-full object-cover" src={hero} alt="Hero" />
+          playsInline
+          preload="metadata"
+          poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
+          className="rounded-xl relative w-full h-full object-cover"
+        >
+          <source src={heroWebm} type="video/webm" />
+          <source src={heroMp4} type="video/mp4" />
+        </video>
       </div>
 
       {/* GRID CONTENT */}
@@ -135,7 +141,14 @@ export default function HeroLarge() {
               data-x={img.x} data-y={img.y}
               style={{ width: img.w, height: img.h }}
             >
-              <img src={img.src} alt="" />
+              <img
+                src={img.src}
+                alt=""
+                width={img.iw}
+                height={img.ih}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>
@@ -148,7 +161,14 @@ export default function HeroLarge() {
               data-x={img.x} data-y={img.y}
               style={{ width: img.w, height: img.h }}
             >
-              <img src={img.src} alt="" />
+              <img
+                src={img.src}
+                alt=""
+                width={img.iw}
+                height={img.ih}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>
