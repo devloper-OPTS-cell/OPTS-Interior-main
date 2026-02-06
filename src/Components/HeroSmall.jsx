@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown } from "lucide-react";
-import hero from '../assets/site.mp4'
+import hero from '../assets/IMG_5250.mp4'
 
 function HeroSmall() {
   return (
