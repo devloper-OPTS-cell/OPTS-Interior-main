@@ -12,7 +12,9 @@ const left2 = cdn("left2.webp");
 const heroWebm = cdn("IMG_5250-720p.webm");
 const heroMp4 = cdn("IMG_5250-720p.mp4");
 
-gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function HeroLarge() {
   const sectionRef = useRef(null)

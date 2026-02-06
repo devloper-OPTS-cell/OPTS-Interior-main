@@ -44,6 +44,7 @@ const Footer = () => {
             <FooterLink to="/about-us">About Us</FooterLink>
             <FooterLink to="/services">Services</FooterLink>
             <FooterLink to="/projects">Projects</FooterLink>
+            <FooterLink to="/faq">FAQ</FooterLink>
             <FooterLink to="/contact-us">Contact</FooterLink>
           </nav>
 
@@ -78,6 +79,14 @@ const Footer = () => {
                 Dubai
               </span>
             </a>
+
+            <p className="text-xs text-white/70">
+              Service Areas: Dubai, Abu Dhabi, Sharjah, UAE
+            </p>
+
+            <Link to="/services" className="text-xs underline underline-offset-4 hover:opacity-80">
+              Interior design services in Dubai
+            </Link>
           </div>
         </div>
 

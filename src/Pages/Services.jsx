@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react'; 
 import { cdn } from '../utils/cdn';
+import Seo from '../Components/Seo';
+import { breadcrumbSchema, offerCatalogSchema } from '../utils/seo';
 
 const left1 = cdn("left1.webp");
 const img1 = cdn("service-fitout.webp");
@@ -12,6 +14,12 @@ const img5 = cdn("service-turnkey.webp");
 const Office = () => {
   return (
     <div className="relative min-h-screen w-full bg-[#f8f8f8] font-sans overflow-x-hidden text-[#1c1c1c]">
+      <Seo
+        title="Interior Design & Fit-Out Services in Dubai"
+        description="Explore OPTS Express Interior Design services: residential and commercial fit-out, interior design solutions, custom furniture, 3D visualization, and turnkey execution."
+        path="/services"
+        jsonLd={[breadcrumbSchema("/services"), offerCatalogSchema]}
+      />
       
       {/* =========================================
           SECTION 1: HERO

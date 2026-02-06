@@ -133,6 +133,7 @@ function MainLayout({ children }) {
                     <Link to="/contact-us" className='text-lg hover:opacity-70 transition-opacity'> Contacts </Link>
                     <Link to="/services" className='text-lg hover:opacity-70 transition-opacity'> Services </Link>
                     <Link to="/projects" className='text-lg hover:opacity-70 transition-opacity'> Projects </Link>
+                    <Link to="/faq" className='text-lg hover:opacity-70 transition-opacity'> FAQ </Link>
                     
                     <a href={`tel:${phoneNumber}`} className={`flex items-center justify-center border ${isTextWhite ? 'border-white' : 'border-black'} rounded-full px-4 py-2 gap-2 hover:bg-white hover:text-black transition-all duration-300`}>  
                       <Phone size={18} fill="currentColor" strokeWidth={0} className="shake-icon"/> 
@@ -178,6 +179,7 @@ function MainLayout({ children }) {
                 <Link to="/about-us" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400 transition-colors">About Us</Link>
                 <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400 transition-colors"> Projects</Link>
                 <Link to="/services" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400 transition-colors">Services</Link>
+                <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400 transition-colors">FAQ</Link>
                 <Link to="/contact-us" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400 transition-colors">Contacts</Link>
             </div>
 

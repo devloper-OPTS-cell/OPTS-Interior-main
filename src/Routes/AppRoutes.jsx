@@ -6,6 +6,9 @@ const AboutUs = React.lazy(() => import('../Pages/AboutUs'));
 const ContactUs = React.lazy(() => import('../Pages/ContactUs'));
 const Services = React.lazy(() => import('../Pages/Services'));
 const WorksPage = React.lazy(() => import('../Pages/Projects'));
+const ProjectDetail = React.lazy(() => import('../Pages/ProjectDetail'));
+const Faq = React.lazy(() => import('../Pages/Faq'));
+const NotFound = React.lazy(() => import('../Pages/NotFound'));
 
 function AppRoutes() {
 return (
@@ -16,6 +19,9 @@ return (
         <Route path='/contact-us' element={<ContactUs/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/projects' element={<WorksPage/>} />
+        <Route path='/projects/:slug' element={<ProjectDetail/>} />
+        <Route path='/faq' element={<Faq/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </Suspense>
 )

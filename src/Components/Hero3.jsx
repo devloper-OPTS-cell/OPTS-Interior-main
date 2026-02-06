@@ -7,7 +7,9 @@ const IMG_5079 = cdn("IMG_5079.webp");
 const IMG_5078 = cdn("IMG_5078.webp");
 const IMG_5080 = cdn("IMG_5080.webp");
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function Hero3() {
   const sectionRef = useRef(null);

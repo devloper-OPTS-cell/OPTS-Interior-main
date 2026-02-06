@@ -1,5 +1,7 @@
 import React from 'react';
 import { cdn } from '../utils/cdn';
+import Seo from '../Components/Seo';
+import { breadcrumbSchema } from '../utils/seo';
 
 const right1 = cdn("right1.webp");
 
@@ -49,6 +51,12 @@ const ServiceTag = ({ text }) => (
 const AboutUs = () => {
   return (
     <div className="font-sans">
+      <Seo
+        title="About OPTS Interior Design"
+        description="Learn about OPTS Express Interior Design — a Dubai-based interior design and fit-out company known for precision, craftsmanship, and premium project execution."
+        path="/about-us"
+        jsonLd={breadcrumbSchema("/about-us")}
+      />
       
       <div className="p-8 sm:p-16 max-w-[1440px] mx-auto md:mt-10 mt-20">
         
@@ -56,7 +64,7 @@ const AboutUs = () => {
         <div className="mb-24">
           {/* HEADING: Blue to match Footer */}
           <h1 className="text-4xl sm:text-8xl font-bold font-grotesk mb-12 ">
-            ABOUT US
+            About OPTS Interior Design
           </h1>
           <div className="rounded-3xl overflow-hidden mb-16 shadow-2xl">
             <img

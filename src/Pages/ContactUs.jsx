@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from "lucide-react";
+import Seo from '../Components/Seo';
+import { breadcrumbSchema } from '../utils/seo';
 
 function ContactUs() {
   const [status, setStatus] = useState("idle");
@@ -63,12 +65,18 @@ function ContactUs() {
   return (
     // 1. Main Background changed to white
     <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-8 font-sans md:mt-10 mt-20">
+      <Seo
+        title="Contact OPTS Interior Design"
+        description="Contact OPTS Express Interior Design in Dubai for premium interior design, fit-out, and custom furniture services."
+        path="/contact-us"
+        jsonLd={breadcrumbSchema("/contact-us")}
+      />
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         
         {/* LEFT SIDE: Text is now Dark Blue (#032859) to be visible on white bg */}
         <div className="text-[#032859] space-y-8 mt-4 lg:mt-20">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-normal">Contact Us</h1>
+            <h1 className="text-4xl md:text-5xl font-normal">Contact OPTS Interior Design</h1>
             <p className="text-[#032859]/80 text-lg leading-relaxed max-w-md">
               Not sure what you need? The team at OPTS will be happy to listen to you and suggest event ideas you hadn't considered.
             </p>

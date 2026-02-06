@@ -2,83 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { cdn } from '../utils/cdn';
-
-const img1 = cdn("IMG_4983.webp");
-const img2 = cdn("IMG_5184.webp");
-const img3 = cdn("IMG_5186.webp");
-const img4 = cdn("IMG_5188.webp");
-const img5 = cdn("IMG_5189.webp");
-const img6 = cdn("IMG_1232.webp");
-
-const projects = [
-  {
-    id: 1,
-    title: "Gulfood Dubai: Azerbaijan Pavilion",
-    category: "Modern cultural design showcasing premium food brands with professional craftsmanship.",
-    image: img1,
-    width: 5712,
-    height: 4284,
-    bgColor: "#E3CAA5",
-    rotate: -10,
-    zIndex: 1,
-  },
-  {
-    id: 2,
-    title: "Luxury Villa Outdoor Design",
-    category: "Modern resort-style living featuring premium materials and elegant outdoor functionality.",
-    image: img2, 
-    width: 1280,
-    height: 720,
-    bgColor: "#95B2B0",
-    rotate: -5,
-    zIndex: 2,
-  },
-  {
-    id: 3,
-    title: "Bespoke Modern Luxury Bedroom",
-    category: "Serene five-star retreat featuring premium textures and meticulous custom craftsmanship.",
-    image: img3, 
-    width: 1280,
-    height: 960,
-    bgColor: "#F1F0EA",
-    rotate: 0,
-    zIndex: 3,
-  },
-  {
-    id: 4,
-    title: "Luxury Spa-Like Villa Bathroom",
-    category: "Elegant marble retreat featuring custom fluted vanities and modern precision.",
-    image: img4, 
-    width: 960,
-    height: 1280,
-    bgColor: "#1A1A1A",
-    rotate: 5,
-    zIndex: 2,
-  },
-  {
-    id: 5,
-    title: "Minimalist Modern Dining Space",
-    category: "Warm wooden accents and cove lighting create a sophisticated dining atmosphere.",
-    image: img6, 
-    width: 1280,
-    height: 1280,
-    bgColor: "#D4D4D4",
-    rotate: 10,
-    zIndex: 1,
-  },
-  {
-    id: 6,
-    title: "Villa Entertainment Lounge",
-    category: "Bold industrial-chic space blending high-end entertainment with modern comfort.",
-    image: img5, 
-    width: 1280,
-    height: 960,
-    bgColor: "#D4D4D4",
-    rotate: 15,
-    zIndex: 0,
-  },
-];
+import { projects } from "../data/projects";
 
 const Works = () => {
   const [activeId, setActiveId] = useState(3);
@@ -112,12 +36,11 @@ const Works = () => {
         {isMobile ? (
           <div className="w-full flex overflow-x-auto snap-x snap-mandatory px-6 gap-4 pb-8 no-scrollbar">
             {projects.map((project) => (
-              <div 
-                key={project.id} 
-                className="relative shrink-0 snap-center rounded-sm overflow-hidden shadow-xl"
+              <Link
+                key={project.id}
+                to={`/projects/${project.slug}`}
+                className="relative shrink-0 snap-center rounded-sm overflow-hidden shadow-xl block"
                 style={{ width: "85vw", height: "50vh" }}
-                // Placeholder for navigation
-                onClick={() => console.log(`Maps to project ${project.id}`)} 
               >
                 <img
                   src={project.image}
@@ -130,10 +53,10 @@ const Works = () => {
                 />
                 {/* Mobile Text Overlay (Better UX for scrolling) */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-12">
-                   <h3 className="text-2xl font-medium text-white mb-1">{project.title}</h3>
-                   <p className="text-gray-300 text-sm leading-snug">{project.category}</p>
+                  <h3 className="text-2xl font-medium text-white mb-1">{project.title}</h3>
+                  <p className="text-gray-300 text-sm leading-snug">{project.category}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         ) : (
@@ -144,44 +67,49 @@ const Works = () => {
               {projects.map((project) => {
                 const isActive = activeId === project.id;
                 return (
-                  <motion.div
+                  <Link
                     key={project.id}
+                    to={`/projects/${project.slug}`}
+                    className="block"
                     onMouseEnter={() => setActiveId(project.id)}
-                    className="relative cursor-pointer shrink-0 rounded-sm shadow-2xl overflow-hidden"
-                    style={{
-                      width: 320,
-                      height: 480,
-                      marginLeft: "-60px",
-                      marginRight: "-60px",
-                      zIndex: isActive ? 50 : project.zIndex, 
-                      transformOrigin: "bottom center",
-                      willChange: "transform"
-                    }}
-                    animate={{
-                      y: isActive ? -30 : 0, 
-                      scale: isActive ? 1.1 : 1, 
-                      rotate: isActive ? 0 : project.rotate
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                    }}
                   >
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 transition-opacity duration-300"
-                      style={{ opacity: isActive ? 0.25 : 0.6 }}
-                    />
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                      width={project.width}
-                      height={project.height}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </motion.div>
+                    <motion.div
+                      className="relative cursor-pointer shrink-0 rounded-sm shadow-2xl overflow-hidden"
+                      style={{
+                        width: 320,
+                        height: 480,
+                        marginLeft: "-60px",
+                        marginRight: "-60px",
+                        zIndex: isActive ? 50 : project.zIndex, 
+                        transformOrigin: "bottom center",
+                        willChange: "transform"
+                      }}
+                      animate={{
+                        y: isActive ? -30 : 0, 
+                        scale: isActive ? 1.1 : 1, 
+                        rotate: isActive ? 0 : project.rotate
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                      }}
+                    >
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 transition-opacity duration-300"
+                        style={{ opacity: isActive ? 0.25 : 0.6 }}
+                      />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                        width={project.width}
+                        height={project.height}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </motion.div>
+                  </Link>
                 );
               })}
             </div>
