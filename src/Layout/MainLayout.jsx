@@ -162,7 +162,7 @@ function MainLayout({ children }) {
             {/* Overlay Header */}
             <div className="flex justify-between items-center p-6 pt-8 text-white">
                {/* Using logo image for Overlay as well to keep it consistent */}
-               <img className="h-8 object-contain brightness-0 invert" alt="OPTS Interior logo" />
+
                
                <div className="flex items-center gap-6">
                   <a href={`tel:${phoneNumber}`}>
