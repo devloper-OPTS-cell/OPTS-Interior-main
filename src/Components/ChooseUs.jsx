@@ -11,7 +11,7 @@ import left1 from '../assets/left1.jpg';
 
 const ChooseUs = () => {
   return (
-    <div className="min-h-screen bg-[#fbfbf9] text-[#333333] font-sans selection:bg-[#dea03c] selection:text-white">
+    <div className="min-h-screen bg-[#fbfbf9] text-[#2f2f2f] font-sans selection:bg-[#dea03c] selection:text-white">
       
       {/* SECTION 1: HERO / WHY CHOOSE US */}
       {/* Added px-4 sm:px-6 lg:px-8 for horizontal gutters */}
@@ -46,7 +46,7 @@ With hands-on industry experience, skilled craftsmanship, and a detail-oriented 
         {/* Responsive Height: h-[400px] on mobile, h-[600px] on desktop */}
         <div className="relative mt-8 lg:mt-0 h-[400px] lg:h-[600px] w-full">
           {/* Main Large Image (Back) */}
-          <div className="absolute top-0 right-0 w-4/5 h-4/5 overflow-hidden shadow-sm">
+          <div className="absolute top-0 right-0 w-4/5 h-4/5 overflow-hidden shadow-sm rounded-md">
             <img 
               src={left1}
               alt="House Exterior with trees" 
@@ -55,7 +55,7 @@ With hands-on industry experience, skilled craftsmanship, and a detail-oriented 
           </div>
 
           {/* Overlapping Image (Front/Bottom Left) */}
-          <div className="absolute bottom-0 left-0 w-3/5 h-[55%] overflow-hidden shadow-lg border-4 border-[#fbfbf9]">
+          <div className="absolute bottom-0 left-0 w-3/5 h-[55%] overflow-hidden shadow-lg border-4 border-[#fbfbf9] rounded-md">
             <img 
               src={right1}
               alt="Outdoor shower detail" 

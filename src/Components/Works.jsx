@@ -83,10 +83,10 @@ const Works = () => {
       
       {/* HEADER */}
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-24 mt-10 gap-6">
-        <h2 className="text-4xl md:text-6xl font-light uppercase condensed font-grotesk leading-tight">
+        <h2 className="text-4xl md:text-6xl font-light uppercase condensed font-grotesk leading-tight tracking-tight">
           Selected <br className="hidden md:block" /> Client Projects
         </h2>
-        <Link to='/projects' className="border italic border-white/30 px-6 py-3 text-sm md:text-lg uppercase hover:bg-white hover:text-black transition-colors flex items-center gap-2">
+        <Link to='/projects' className="border italic border-white/40 px-6 py-3 text-sm md:text-lg uppercase tracking-wider rounded-full hover:bg-white hover:text-black hover:border-white transition-all duration-300 flex items-center gap-2">
           View All Projects <ArrowRight size={16} />
         </Link>
       </div>

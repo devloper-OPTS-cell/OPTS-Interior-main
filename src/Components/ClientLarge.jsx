@@ -27,9 +27,9 @@ const logos = [
 
 function Clients() {
   return (
-    <section className='w-full py-10 flex flex-col items-center px-4'>
+    <section className='w-full py-14 md:py-20 flex flex-col items-center px-4 text-[#111111]'>
       {/* Dynamic Font Scaling */}
-      <h1 className='font-grotesk text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] mb-12 text-center'>
+      <h1 className='font-grotesk text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] mb-12 text-center tracking-tight leading-none'>
         Our Clients
       </h1>
 
@@ -38,7 +38,7 @@ function Clients() {
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center">
             <img 
-              className='w-full max-w-[180px] h-auto object-contain ' 
+              className='w-full max-w-[180px] h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300' 
               src={logo} 
               alt={`Client ${index + 1}`} 
             />

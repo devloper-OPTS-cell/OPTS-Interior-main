@@ -1,41 +1,47 @@
 import React from 'react';
+import img1 from '../assets/projects/IMG_4983.png'
+import img2 from '../assets/projects/IMG_5184.jpg'
+import img3 from '../assets/projects/IMG_5186.jpg'
+import img4 from '../assets/projects/IMG_5188.jpg'
+import img5 from '../assets/projects/IMG_5189.jpg'
+import img6 from '../assets/projects/IMG_1232.jpg'
 
 const worksData = [
   {
     id: '01',
-    title: 'First things first: Strategie',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+    title: "Gulfood Dubai: Azerbaijan Pavilion",
+    category: "A refined cultural pavilion celebrating Azerbaijan’s premium food brands with elegant exhibition layouts, warm material tones, and precision-built detailing. The space blends modern presentation with handcrafted finishes to create an upscale, welcoming experience for visitors.",
+    img: img1
   },
   {
     id: '02',
-    title: 'We Made cool things',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+    title: "Luxury Villa Outdoor Design",
+    category: "Resort-inspired outdoor living designed for comfort and sophistication, featuring premium stone, rich textures, and tailored lighting. The layout balances open-air relaxation with functional zones for dining, lounging, and entertaining in a private villa setting.",
+    img: img2
   },
   {
     id: '03',
-    title: 'Digital Experience',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+        title: "Bespoke Modern Luxury Bedroom",
+    category: "A calm, five‑star bedroom retreat defined by bespoke millwork, layered textures, and soft ambient lighting. Every element is tailored for comfort and refinement, from the custom headboard to the finely detailed joinery and finishes.",
+    img: img3
   },
   {
     id: '04',
-    title: 'Creative Solutions',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+    title: "Luxury Spa-Like Villa Bathroom",
+    category: "A spa‑inspired bathroom with elegant marble surfaces, custom fluted vanities, and clean architectural lines. The design emphasizes serenity and precision, combining high‑end materials with a refined, minimalist layout.",
+    img: img4
   },
   {
     id: '05',
-    title: 'Brand Identity',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+    title: "Minimalist Modern Dining Space",
+    category: "A minimalist dining environment elevated by warm wood tones, soft cove lighting, and a balanced material palette. The space is designed for modern entertaining with a clean, sophisticated aesthetic that feels both intimate and luxurious.",
+    img: img5
   },
   {
     id: '06',
-    title: 'Future Proofing',
-    desc: 'Wir verschaffen uns einen Überblick über den Status Quo, stecken gemeinsam künftige Ziele ab und entwickeln auf dieser Basis einen soliden Projektplan. Dabei verstehen wir uns als beratender Partner.',
-    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+    title: "Villa Entertainment Lounge",
+    category: "An industrial‑chic entertainment lounge that pairs bold textures with high‑end comfort. Thoughtful lighting, tailored built‑ins, and a streamlined layout create a premium setting for media, gatherings, and relaxed social evenings.",
+    img: img6
   },
 ];
 
@@ -80,7 +86,7 @@ function WorksPage() {
                 {work.title}
               </h2>
               <p className="text-lg md:text-xl font-light text-gray-900 leading-relaxed opacity-80">
-                {work.desc}
+                {work.category}
               </p>
             </div>
           </div>
