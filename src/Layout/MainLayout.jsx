@@ -1,15 +1,18 @@
 // MainLayout.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Footer from '../Components/Footer';
 import logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, Instagram } from 'lucide-react'; // Added Instagram here
+import Lenis from 'lenis';
 
 function MainLayout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for Mobile Menu
   const location = useLocation();
   const phoneNumber = "+971543430661";
+  const lenisRef = useRef(null);
+  const rafRef = useRef(null);
 
   const isHome = location.pathname === '/';
   
@@ -25,12 +28,51 @@ function MainLayout({ children }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Global smooth scrolling (keeps native touch scrolling on mobile)
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+      smoothWheel: true,
+      smoothTouch: false,
+      touchMultiplier: 1.5,
+    });
+
+    lenisRef.current = lenis;
+
+    const raf = (time) => {
+      lenis.raf(time);
+      rafRef.current = requestAnimationFrame(raf);
+    };
+
+    rafRef.current = requestAnimationFrame(raf);
+
+    return () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+      lenis.destroy();
+      lenisRef.current = null;
+    };
+  }, []);
+
   // Prevent background scrolling when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+
+  // Pause Lenis when the mobile menu is open
+  useEffect(() => {
+    const lenis = lenisRef.current;
+    if (!lenis) return;
+    if (isMenuOpen) {
+      lenis.stop();
+    } else {
+      lenis.start();
     }
   }, [isMenuOpen]);
 
@@ -65,8 +107,8 @@ function MainLayout({ children }) {
             <div className={`flex items-center justify-between w-full transition-all duration-700 px-6 md:px-10 ${isScrolled ? 'px-6 md:px-8' : 'px-6 md:px-20'}`}>
                 
                 {/* Logo */}
-                <Link to="/" className="z-50"> 
-                  <img className='h-8 md:h-12 object-contain' src={logo} alt="Logo" /> 
+                <Link to="/" className="z-50 flex items-center"> 
+                  <img className='h-12 md:h-[68px] object-contain' src={logo} alt="Logo" /> 
                 </Link>
                 
                 {/* --- DESKTOP MENU (Hidden on Mobile) --- */}

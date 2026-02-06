@@ -136,13 +136,13 @@ const Works = () => {
                       marginLeft: "-60px",
                       marginRight: "-60px",
                       zIndex: isActive ? 50 : project.zIndex, 
-                      transformOrigin: "bottom center" 
+                      transformOrigin: "bottom center",
+                      willChange: "transform"
                     }}
                     animate={{
                       y: isActive ? -30 : 0, 
                       scale: isActive ? 1.1 : 1, 
-                      rotate: isActive ? 0 : project.rotate, 
-                      filter: isActive ? "brightness(1.1)" : "brightness(0.6)", 
+                      rotate: isActive ? 0 : project.rotate
                     }}
                     transition={{
                       type: "spring",
@@ -150,7 +150,10 @@ const Works = () => {
                       damping: 20,
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 transition-opacity duration-300"
+                      style={{ opacity: isActive ? 0.25 : 0.6 }}
+                    />
                     <img
                       src={project.image}
                       alt={project.title}
