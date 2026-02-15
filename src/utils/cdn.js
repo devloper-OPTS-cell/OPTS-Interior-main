@@ -1,4 +1,4 @@
-const CDN_BASE = "https://opts-assests.b-cdn.net";
+const CDN_BASE = "https://opts-assets.pages.dev";
 
 export const cdn = (path = "") => {
   const cleanPath = String(path).replace(/^\/+/, "");

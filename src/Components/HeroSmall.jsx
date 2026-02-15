@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowDown } from "lucide-react";
 import { cdn } from '../utils/cdn';
 
-const heroWebm = cdn("IMG_5250-720p.webm");
-const heroMp4 = cdn("IMG_5250-720p.mp4");
+const heroWebm = "https://opts-videos.pages.dev/IMG_5250-720p.webm";
+const heroMp4 = "https://opts-videos.pages.dev/IMG_5250-720p.mp4";
 
 function HeroSmall() {
   return (
@@ -43,7 +43,7 @@ function HeroSmall() {
   title="OPTS Interior hero video"
   aria-label="OPTS Interior hero video"
   className="relative w-full h-full object-cover rounded-xl"
-  poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
+  poster="https://opts-assets.pages.dev/IMG_5250-poster.webp"
 >
   <source src={heroWebm} type="video/webm" />
   <source src={heroMp4} type="video/mp4" />
@@ -53,5 +53,6 @@ function HeroSmall() {
     </section>
   );
 }
+
 
 export default HeroSmall;

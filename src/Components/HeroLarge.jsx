@@ -9,8 +9,8 @@ const right1 = cdn("right1.webp");
 const left1 = cdn("left1.webp");
 const right2 = cdn("right2.webp");
 const left2 = cdn("left2.webp");
-const heroWebm = cdn("IMG_5250-720p.webm");
-const heroMp4 = cdn("IMG_5250-720p.mp4");
+const heroWebm = "https://opts-videos.pages.dev/IMG_5250-720p.webm";
+const heroMp4 = "https://opts-videos.pages.dev/IMG_5250-720p.mp4";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -126,7 +126,7 @@ export default function HeroLarge() {
           loop
           playsInline
           preload="metadata"
-          poster="https://opts-assests.b-cdn.net/IMG_5250-poster.webp"
+          poster="https://opts-assets.pages.dev/IMG_5250-poster.webp"
           title="OPTS Interior hero video"
           aria-label="OPTS Interior hero video"
           className="rounded-xl relative w-full h-full object-cover"
