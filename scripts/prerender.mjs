@@ -31,8 +31,11 @@ const template = fs.readFileSync(templatePath, "utf-8");
 const vite = await createServer({
   root,
   logLevel: "error",
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, hmr: false },
   appType: "custom",
+  ssr: {
+    noExternal: ["react-helmet-async"],
+  },
 });
 
 try {
@@ -46,6 +49,9 @@ try {
     );
 
     if (headTags) {
+      if (headTags.includes("<title")) {
+        html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, "");
+      }
       html = html.replace("</head>", `${headTags}\n  </head>`);
     }
 

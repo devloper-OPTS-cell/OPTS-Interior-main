@@ -1,22 +1,48 @@
 import React from "react";
-import { renderToString } from "react-dom/server";
+import { PassThrough } from "node:stream";
+import { renderToPipeableStream } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import HelmetAsync from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import App from "./App.jsx";
 
-export function render(url) {
+function renderAppToString(element) {
+  return new Promise((resolve, reject) => {
+    let html = "";
+    const stream = new PassThrough();
+
+    stream.on("data", (chunk) => {
+      html += chunk.toString();
+    });
+    stream.on("end", () => resolve(html));
+    stream.on("error", reject);
+
+    const { pipe, abort } = renderToPipeableStream(element, {
+      onAllReady() {
+        pipe(stream);
+      },
+      onError(error) {
+        reject(error);
+      },
+    });
+
+    setTimeout(() => abort(), 10000);
+  });
+}
+
+export async function render(url) {
   const helmetContext = {};
-  const appHtml = renderToString(
-    <HelmetAsync.HelmetProvider context={helmetContext}>
+  const appHtml = await renderAppToString(
+    <HelmetProvider context={helmetContext}>
       <StaticRouter location={url}>
         <App />
       </StaticRouter>
-    </HelmetAsync.HelmetProvider>
+    </HelmetProvider>
   );
 
   const { helmet } = helmetContext;
+  const titleTag = helmet?.title?.toString() || "";
   const headTags = [
-    helmet?.title?.toString() || "",
+    titleTag.includes("></title>") ? "" : titleTag,
     helmet?.meta?.toString() || "",
     helmet?.link?.toString() || "",
     helmet?.script?.toString() || "",

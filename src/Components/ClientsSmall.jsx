@@ -27,6 +27,8 @@ const logos = [
 ];
 
 function Clients() {
+  const isServer = typeof window === "undefined";
+
   return (
     <div className='w-full flex flex-col items-center overflow-hidden py-10'>
       {/* Responsive Heading: Small on mobile, large on desktop */}
@@ -34,20 +36,37 @@ function Clients() {
         Our Clients
       </h1>
 
-      <Marquee speed={50} gradient={false} pauseOnHover={true}>
-        {logos.map((logo, index) => (
-          <img 
-            key={index}
-            className='mx-4 w-42 h-30 md:w-48 md:h-32 lg:w-60 lg:h-45 object-contain flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300' 
-            src={logo} 
-            alt={`Client Logo ${index + 1}`} 
-            width={632}
-            height={395}
-            loading="lazy"
-            decoding="async"
-          />
-        ))}
-      </Marquee>
+      {isServer ? (
+        <div className="w-full flex flex-wrap justify-center gap-4">
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              className='mx-4 w-42 h-30 md:w-48 md:h-32 lg:w-60 lg:h-45 object-contain flex items-center justify-center opacity-80'
+              src={logo}
+              alt={`Client Logo ${index + 1}`}
+              width={632}
+              height={395}
+              loading="lazy"
+              decoding="async"
+            />
+          ))}
+        </div>
+      ) : (
+        <Marquee speed={50} gradient={false} pauseOnHover={true}>
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              className='mx-4 w-42 h-30 md:w-48 md:h-32 lg:w-60 lg:h-45 object-contain flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300'
+              src={logo}
+              alt={`Client Logo ${index + 1}`}
+              width={632}
+              height={395}
+              loading="lazy"
+              decoding="async"
+            />
+          ))}
+        </Marquee>
+      )}
     </div>
   );
 }
