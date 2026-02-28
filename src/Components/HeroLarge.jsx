@@ -114,7 +114,7 @@ export default function HeroLarge() {
         <div className="absolute inset-2 z-[5] bg-gradient-to-t from-black/70 via-black/20 to-transparent rounded-xl pointer-events-none" />
         
         <div ref={textRef} className="absolute h-full w-[50vw] z-10 text-white flex flex-col justify-end items-start p-20 ">
-          <h1 className="text-5xl leading-tight tracking-tight">Designing Spaces That Reflect Precision & Elegance. </h1>
+          <h1 className="text-5xl leading-tight tracking-tight">Luxury Interior Design & Fit-Out Company in Dubai</h1>
           <p className="text-lg mb-20 text-xl w-[35vw] border-t mt-2 leading-tight text-white/90"> 
             From concept to completion, OPTS Express Interior delivers refined interior solutions with attention to every detail.
           </p>

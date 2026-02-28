@@ -33,7 +33,7 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-[#FBFBF9] font-sans md:mt-10 mt-20">
       <Seo
         title={project.title}
-        description={project.category}
+        description={`${project.title} in ${project.location} by OPTS Interior. ${project.overview}`}
         path={`/projects/${project.slug}`}
         type="article"
         jsonLd={breadcrumbSchema(`/projects/${project.slug}`, project.title)}

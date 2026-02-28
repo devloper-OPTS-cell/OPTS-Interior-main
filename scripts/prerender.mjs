@@ -52,6 +52,7 @@ try {
       if (headTags.includes("<title")) {
         html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, "");
       }
+      html = html.replace(/<meta[^>]*name=["']description["'][^>]*>\s*/i, "");
       html = html.replace("</head>", `${headTags}\n  </head>`);
     }
 

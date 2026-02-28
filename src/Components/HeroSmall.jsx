@@ -18,7 +18,7 @@ function HeroSmall() {
         <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 md:p-20">
           <div className="max-w-4xl">
             <h1 className="text-white text-4xl md:text-6xl sm:leading-tight mb-4 drop-shadow-md tracking-tight">
-              Designing Spaces That Reflect Precision & Elegance
+              Luxury Interior Design & Fit-Out Company in Dubai
             </h1>
             
             <div className="border-t border-white/40 pt-4 mb-8 max-w-sm">
