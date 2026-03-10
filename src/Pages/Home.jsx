@@ -51,10 +51,11 @@ function Home() {
       <Suspense fallback={<div className="min-h-[280px]" />}>
         <Works />
       </Suspense>
+            <TurnkeyStats />
       <Suspense fallback={<div className="min-h-[220px]" />}>
         <ChooseUs />
       </Suspense>
-      <TurnkeyStats />
+
     </div>
   )
 }

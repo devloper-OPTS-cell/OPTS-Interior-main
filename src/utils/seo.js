@@ -7,7 +7,7 @@ export const seoDefaults = {
   description:
     "OPTS Express Interior Design delivers premium interior design and fit-out solutions for residential and commercial spaces in Dubai.",
   image: cdn("right1.webp"),
-  logo: "https://optsinterior.com/cdn(IMG_5081.webp)",
+  logo: "https://opts-assets2.pages.dev/IMG_6452.PNG",
 };
 
 const offerCatalogItems = [

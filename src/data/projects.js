@@ -130,7 +130,7 @@ export const projects = [
     title: "Hotel Room Interior – Iraq",
     category:
       "This modern hotel room interior in Iraq was designed and manufactured by OPTS Express Interior Design.",
-    image: cdn("IMG_5334.webp"),
+    image: "https://opts-assets2.pages.dev/IMG_5334.webp",
     width: 1280,
     height: 960,
     rotate: -8,

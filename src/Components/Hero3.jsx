@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cdn } from '../utils/cdn';
 
 
-const IMG_5079 = cdn("IMG_5081.webp");
+const IMG_5079 = "https://opts-assets2.pages.dev/IMG_5081.webp";
 const IMG_5078 = cdn("IMG_5078.webp");
 const IMG_5080 = cdn("IMG_5080.webp");
 
@@ -134,7 +134,7 @@ The heart of your home deserves a statement. Discover sofas and centerpieces tha
             {/* WRAPPER 1 */}
             <div className="energy-img img-1">
               <img
-                src="https://media.designcafe.com/wp-content/uploads/2021/09/29221230/dining-room-design-with-walnut-wood-dining-table-and-chairs-and-glass-front-crockery-unit.jpg"
+                src="https://opts-assets2.pages.dev/IMG_6600.JPG"
                 className="img-cover"
                 alt="IMG_5080"
                 width={1000}
