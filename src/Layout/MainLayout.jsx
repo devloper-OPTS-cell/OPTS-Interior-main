@@ -145,7 +145,7 @@ function MainLayout({ children }) {
                 {/* Logo */}
                 <Link to="/" className="z-50 flex items-center"> 
                   <img
-                    className='h-22 md:h-[68px] object-contain'
+                    className='h-12 md:h-[68px] object-contain'
                     src={logo}
                     alt="Logo"
                   /> 
