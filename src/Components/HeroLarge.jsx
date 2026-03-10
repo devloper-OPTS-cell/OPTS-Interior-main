@@ -116,7 +116,7 @@ export default function HeroLarge() {
         <div ref={textRef} className="absolute h-full w-[50vw] z-10 text-white flex flex-col justify-end items-start p-20 ">
           <h1 className="text-5xl leading-tight tracking-tight">Luxury Interior Design & Fit-Out Company in Dubai</h1>
           <p className="text-lg mb-20 text-xl w-[35vw] border-t mt-2 leading-tight text-white/90"> 
-            From concept to completion, OPTS Express Interior delivers refined interior solutions with attention to every detail.
+Design that feels like home. Create your personal sanctuary in the heart of the city with our hand-picked furniture and soulful interior solutions.
           </p>
           <p> <ArrowDown size={34} /> </p>
         </div>

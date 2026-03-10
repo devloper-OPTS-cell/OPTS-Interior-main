@@ -1,4 +1,6 @@
 import { cdn } from "../utils/cdn.js";
+import ajbr from '../Components/VN20260307_192903.mp4'
+
 
 export const projects = [
   {
@@ -120,5 +122,25 @@ export const projects = [
       "A high-end entertainment space designed for immersive media and social gatherings.",
     highlights:
       "Textural contrast, tailored lighting, and integrated cabinetry deliver a premium lounge feel.",
+  },
+  {
+    id: 7,
+    displayId: "07",
+    slug: "hotel-room-interior-iraq",
+    title: "Hotel Room Interior – Iraq",
+    category:
+      "This modern hotel room interior in Iraq was designed and manufactured by OPTS Express Interior Design.",
+    image: cdn("IMG_5334.webp"),
+    width: 1280,
+    height: 960,
+    rotate: -8,
+    zIndex: 2,
+    type: "Residential Interior",
+    location: "IRAQ",
+    scope: ["Concept Design", "Fit-Out", "Custom Joinery"],
+    overview:
+      "The space features a sophisticated neutral color palette, warm wood finishes, and custom-built furniture that creates a calm and luxurious atmosphere for guests. The room includes a custom upholstered bed with a decorative headboard, elegant bedside tables, integrated LED lighting, comfortable seating, and built-in wardrobes. Every furniture piece was carefully crafted to combine modern aesthetics, functionality, and long-lasting quality.",
+    highlights:
+      "This project reflects the commitment of OPTS Express Interior Design to delivering high-quality hospitality interiors with precision craftsmanship and contemporary design.",
   },
 ];

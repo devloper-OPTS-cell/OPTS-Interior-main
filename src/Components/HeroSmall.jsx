@@ -23,7 +23,7 @@ function HeroSmall() {
             
             <div className="border-t border-white/40 pt-4 mb-8 max-w-sm">
               <p className="text-white text-base md:text-xl leading-relaxed opacity-90">
-                At OTPS Express Interior we build inspiration of your dreams into reality.
+Design that feels like home. Create your personal sanctuary in the heart of the city with our hand-picked furniture and soulful interior solutions.
               </p>
             </div>
             

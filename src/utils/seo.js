@@ -7,7 +7,7 @@ export const seoDefaults = {
   description:
     "OPTS Express Interior Design delivers premium interior design and fit-out solutions for residential and commercial spaces in Dubai.",
   image: cdn("right1.webp"),
-  logo: cdn("logo.webp"),
+  logo: "https://optsinterior.com/cdn(IMG_5081.webp)",
 };
 
 const offerCatalogItems = [
@@ -71,7 +71,7 @@ export const organizationSchema = {
   name: "OPTS Express Interior Design",
   legalName: "OPTS Express Interior Design",
   url: "https://optsinterior.com",
-  logo: cdn("logo.webp"),
+  logo: seoDefaults.logo,
   image: cdn("right1.webp"),
   description:
     "Dubai-based interior design and fit-out company delivering premium residential and commercial interiors with custom furniture and turnkey execution.",
@@ -207,7 +207,7 @@ export const businessSchema = {
   "@type": "InteriorDesign",
   name: "OPTS Express Interior Design",
   url: "https://optsinterior.com",
-  logo: cdn("logo.webp"),
+  logo: seoDefaults.logo,
   image: cdn("right1.webp"),
   email: "hello@optsinterior.com",
   telephone: "+971543430661",

@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 
 const Works = () => {
-  const [activeId, setActiveId] = useState(3);
+  const featuredProjects = projects.slice(0, 6);
+  const [activeId, setActiveId] = useState(featuredProjects[0]?.id ?? null);
   const [isMobile, setIsMobile] = useState(false);
-  const activeProject = projects.find((p) => p.id === activeId);
+  const activeProject =
+    featuredProjects.find((p) => p.id === activeId) ?? featuredProjects[0];
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -35,7 +37,7 @@ const Works = () => {
         {/* --- MOBILE VIEW: Horizontal Scroll (Enabled when < md) --- */}
         {isMobile ? (
           <div className="w-full flex overflow-x-auto snap-x snap-mandatory px-6 gap-4 pb-8 no-scrollbar">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
               <Link
                 key={project.id}
                 to={`/projects/${project.slug}`}
@@ -64,7 +66,7 @@ const Works = () => {
           /* Keeping this EXACTLY as your original 'past' code */
           <>
             <div className="flex justify-center items-center h-[500px] w-full relative perspective-1000">
-              {projects.map((project) => {
+              {featuredProjects.map((project) => {
                 const isActive = activeId === project.id;
                 return (
                   <Link

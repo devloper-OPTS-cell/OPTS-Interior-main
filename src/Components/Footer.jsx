@@ -81,7 +81,7 @@ const Footer = () => {
             </a>
 
             <p className="text-xs text-white/70">
-              Service Areas: Dubai, Abu Dhabi, Sharjah, UAE
+              Service Areas: UAE and all Gulf Countries
             </p>
 
             <Link to="/services" className="text-xs underline underline-offset-4 hover:opacity-80">

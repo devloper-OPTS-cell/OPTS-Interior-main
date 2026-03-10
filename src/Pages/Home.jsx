@@ -6,6 +6,7 @@ import HeroLarge from '../Components/HeroLarge'
 import HeroSmall from '../Components/HeroSmall'
 import Hero3 from '../Components/Hero3'
 import Hero2 from '../Components/Hero2'
+import TurnkeyStats from '../Components/TurnkeyStats'
 
 const Clients = React.lazy(() => import("../Components/Clients"));
 const Works = React.lazy(() => import("../Components/Works"));
@@ -53,6 +54,7 @@ function Home() {
       <Suspense fallback={<div className="min-h-[220px]" />}>
         <ChooseUs />
       </Suspense>
+      <TurnkeyStats />
     </div>
   )
 }

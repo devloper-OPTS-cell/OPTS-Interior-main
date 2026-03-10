@@ -78,7 +78,7 @@ function ContactUs() {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-normal">Contact Us</h1>
             <p className="text-[#032859]/80 text-lg leading-relaxed max-w-md">
-              Not sure what you need? The team at OPTS will be happy to listen to you and suggest event ideas you hadn't considered.
+Let’s create something extraordinary together. Book your complimentary design consultation today and take the first step toward your dream home.
             </p>
           </div>
 
