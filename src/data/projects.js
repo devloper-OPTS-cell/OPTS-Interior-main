@@ -1,5 +1,5 @@
 import { cdn } from "../utils/cdn.js";
-import ajbr from '../Components/VN20260307_192903.mp4'
+
 
 
 export const projects = [
