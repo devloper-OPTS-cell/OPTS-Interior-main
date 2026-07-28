@@ -10,7 +10,7 @@ const Footer = () => {
   const recipientEmail = "hello@optsinterior.com";
   const phoneNumber = "+971543430661";
   const phoneNumberAlt = "+971502451051";
-  const mapLink = "https://maps.app.goo.gl/YourCopiedLinkHere";
+  const mapLink = "https://maps.app.goo.gl/n48M16EhNiBbMxGJ7?g_st=iw";
 
   return (
     <footer className="bg-[#032859] text-white font-sans">
